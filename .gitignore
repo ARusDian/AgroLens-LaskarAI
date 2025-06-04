@@ -1,7 +1,7 @@
-ImageClassification/augmented_balanced
-ImageClassification/DATASET-CAPSTONE-BANGKIT-1
-ImageClassification/merged_dataset
-ImageClassification/processed_dataset
-ImageClassification/saved_model
-ImageClassification/tfjs_model
-ImageClassification/tflite
+ImageClassification/augmented_balanced/
+ImageClassification/DATASET-CAPSTONE-BANGKIT-1/
+ImageClassification/merged_dataset/
+ImageClassification/processed_dataset/
+ImageClassification/saved_model/
+ImageClassification/tfjs_model/
+ImageClassification/tflite/
