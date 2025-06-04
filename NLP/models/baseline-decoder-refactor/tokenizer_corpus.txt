@@ -86,3 +86,95 @@ Pada fase pertumbuhan apa saja tanaman padi dapat terserang Bacterial Blight?
 Penyakit Bacterial Blight bakteri dapat menyerang tanaman padi pada semua fase pertumbuhan, baik vegetatif maupun generatif.
 Apa dampak serangan Bacterial Blight  pada hasil panen padi?
 Serangan dapat menurunkan hasil panen hingga 50% karena malai yang hampa akibat gangguan proses pengisian.
+Apa nama ilmiah bakteri penyebab penyakit hawar daun/bacterial blight bakteri pada padi?
+Penyakit hawar daun bakteri disebabkan oleh bakteri Xanthomonas oryzae pv. oryzae.
+Bagaimana penyakit hawar daun/bacterial blight bakteri dapat merugikan produksi padi?
+Hawar daun bakteri dapat menyebabkan kerusakan mencapai 50% pada tanaman padi. Penyakit ini tidak mengganggu pertumbuhan tanaman secara langsung tetapi akan mengganggu proses pengisian malai, sehingga malai akan menjadi hampa.
+Pada fase apa saja penyakit hawar daun bakteri dapat menyerang tanaman padi?
+Penyakit hawar daun bakteri dapat menyerang tanaman padi pada semua fase pertumbuhan, baik fase vegetatif maupun fase generatif.
+Bagaimana gejala awal penyakit hawar daun bakteri pada daun padi?
+Gejala awal hawar daun bakteri adalah adanya bercak berwarna keabuan pada tepi daun.
+Mengapa karakterisasi bakteri penyebab penyakit hawar daun pada tanaman padi penting dilakukan?
+Karakterisasi bakteri penyebab penyakit hawar daun padi penting dilakukan untuk dapat menentukan metode pengendalian yang tepat sasaran, efektif, dan efisien, serta untuk mengetahui morfologi dan sifat fisiologi bakteri patogen.
+Bagaimana ciri-ciri morfologi mikroskopis bakteri Xanthomonas oryzae?
+Secara mikroskopis, Xanthomonas oryzae berbentuk basil (batang) pendek, berukuran (1-2) x (0,8-1) μm, termasuk bakteri gram negatif, dan di ujungnya terdapat satu flagella polar berukuran 6-8 μm sebagai alat gerak.
+Apa saja karakteristik fisiologi utama dari isolat bakteri penyebab hawar daun padi yang diuji?
+Karakteristik fisiologi isolat bakteri penyebab hawar daun padi adalah merupakan bakteri gram negatif, bersifat oksidatif (aerob), berwarna kuning pada media YDC, dan bereaksi negatif pada uji urease.
+Apa yang menyebabkan koloni bakteri Xanthomonas berwarna kuning pada media YDC?
+Koloni bakteri berwarna kuning pada media YDC disebabkan oleh aktivitas biokimia dari bakteri genus Xanthomonas yang dapat memproduksi pigmen xanthomonadin, yang merupakan ciri khas dari genus tersebut.
+Bagaimana sifat bakteri Xanthomonas oryzae terkait kebutuhan oksigen berdasarkan uji oksidasi-fermentatif?
+Bakteri Xanthomonas oryzae bersifat aerob, artinya dapat tumbuh bila terdapat oksigen dan tidak dapat tumbuh pada keadaan anaerob (tanpa oksigen).
+Apakah bakteri dari genus Xanthomonas mampu menghasilkan enzim urease?
+Berdasarkan penelitian, bakteri dari genus Xanthomonas tidak mampu menghasilkan enzim urease, yang ditunjukkan dengan reaksi negatif pada uji urease.
+Apa arti dari reaksi hipersensitif yang ditunjukkan oleh isolat bakteri pada daun tembakau?
+Reaksi hipersensitif, yang ditandai dengan nekrosis atau perubahan warna kuning pada jaringan daun tembakau setelah injeksi suspensi bakteri, menandakan bahwa isolat bakteri tersebut bersifat virulen atau merupakan patogen yang dapat menyebabkan penyakit pada tanaman.
+Bakteri apa sih yang bikin penyakit hawar daun/bacterial blight pada padi?
+Penyakit hawar daun pada padi disebabkan oleh jenis bakteri yang namanya Xanthomonas oryzae pv. oryzae.
+Apa ruginya kalau padi kena penyakit hawar daun/bacterial blight bakteri?
+Kalau padi kena penyakit ini, hasil panen bisa berkurang banyak, bahkan sampai setengahnya. Tanaman padinya mungkin tetap kelihatan tumbuh, tapi gabahnya jadi kopong atau tidak berisi sama sekali.
+Kapan saja padi bisa terserang penyakit hawar daun bakteri?
+Padi bisa kena penyakit hawar daun bakteri di semua tahap pertumbuhannya, dari sejak masih muda sampai pas mau berbuah atau panen.
+Apa tanda-tanda awal kalau padi kena penyakit hawar daun bakteri?
+Tanda awalnya, muncul bercak-bercak warna abu-abu di pinggiran daun padi.
+Kenapa penting untuk meneliti sifat-sifat bakteri penyebab hawar daun padi?
+Penting sekali meneliti bakteri ini supaya kita tahu cara paling bagus dan paling pas untuk mengendalikan penyakitnya. Jadi, penanganannya bisa lebih efektif dan tidak buang-buang biaya atau tenaga.
+Kalau dilihat pakai mikroskop, seperti apa bentuk bakteri Xanthomonas oryzae itu?
+Kalau dilihat pakai mikroskop, bakteri Xanthomonas oryzae ini bentuknya seperti batang kecil atau pendek. Bakteri ini juga punya semacam 'ekor' kecil untuk bergerak dan termasuk jenis bakteri gram negatif.
+Kenapa ya kumpulan bakteri Xanthomonas bisa jadi warna kuning kalau ditaruh di media YDC di lab?
+Bakteri Xanthomonas itu bisa jadi warna kuning karena dia menghasilkan pewarna alami sendiri yang disebut xanthomonadin. Warna kuning ini jadi ciri khas bakteri jenis Xanthomonas.
+Apakah bakteri jenis Xanthomonas bisa membuat zat yang namanya urease?
+Berdasarkan penelitian, bakteri dari jenis Xanthomonas ini tidak bisa membuat zat yang disebut urease.
+Kalau bakteri penyebab penyakit padi dites ke daun tembakau dan daunnya jadi rusak, itu artinya apa ya?
+Kalau daun tembakau jadi rusak atau menguning setelah kena bakteri itu, artinya bakteri tersebut memang ganas dan bisa menyebabkan penyakit pada tanaman padi.
+Penyakit apa yang disebabkan oleh bakteri Xanthomonas oryzae pv. oryzae pada padi dan seberapa parah?
+Bakteri Xanthomonas oryzae pv. oryzae (disingkat Xoo) menyebabkan penyakit Hawar Daun Bakteri atau Bacterial Blight pada padi. Penyakit ini sangat serius dan menjadi salah satu masalah besar bagi produksi padi di seluruh dunia.
+Apa yang membuat sistem padi dan bakteri Xoo menarik untuk dipelajari peneliti?
+Sistem padi dan bakteri Xoo (penyebab Hawar Daun Bakteri) bagus untuk model penelitian karena susunan genetik keduanya sudah diketahui. Selain itu, ada banyak variasi genetik baik pada padi maupun pada bakterinya, sehingga interaksi keduanya bisa dipelajari lebih dalam.
+Apakah suhu tinggi mempengaruhi kemampuan padi untuk melawan penyakit Hawar Daun Bakteri?
+Ya, suhu tinggi bisa mengurangi keampuhan sebagian besar gen ketahanan padi terhadap penyakit Hawar Daun Bakteri. Tapi, ada satu gen bernama Xa7 yang dilaporkan tetap ampuh melawan penyakit ini meski dalam kondisi suhu tinggi.
+Selain suhu tinggi, apakah kondisi kekeringan juga mempengaruhi ketahanan padi terhadap Hawar Daun Bakteri?
+Iya, kondisi kekeringan juga dapat mempengaruhi keampuhan gen ketahanan padi seperti Xa4 dan Xa7 dalam melawan Hawar Daun Bakteri, dan pengaruhnya bisa berbeda-beda.
+Bagaimana cara agar padi lebih kuat melawan Hawar Daun Bakteri dalam kondisi suhu tinggi dan kekeringan sekaligus?
+Menggabungkan beberapa gen ketahanan, seperti Xa4 dan Xa7, dalam satu tanaman padi (disebut piramida gen) terbukti memberikan ketahanan yang lebih baik terhadap Hawar Daun Bakteri, baik pada suhu tinggi maupun saat kekeringan.
+Apa strategi utama yang dianggap paling mungkin untuk mengendalikan penyakit Hawar Daun Bakteri pada padi?
+Strategi utama yang paling bisa diandalkan untuk mengendalikan penyakit Hawar Daun Bakteri (Bacterial Blight) adalah dengan menanam jenis padi yang memiliki gen ketahanan terhadap penyakit tersebut.
+Dari mana peneliti mendapatkan gen-gen baru untuk membuat padi tahan terhadap Hawar Daun Bakteri?
+Peneliti mendapatkan gen-gen ketahanan baru dari kerabat liar tanaman padi, seperti Oryza rufipogon atau Oryza nivara. Gen ini kemudian dipindahkan ke jenis padi unggul yang biasa ditanam petani.
+Apa itu TAL effector yang dimiliki bakteri Xanthomonas oryzae (Xoo)?
+TAL effector adalah semacam 'senjata' khusus berupa protein yang dikeluarkan oleh bakteri Xoo ke dalam sel padi. Protein ini membantu bakteri menyebabkan infeksi pada tanaman padi.
+Bagaimana bakteri Xoo (penyebab Hawar Daun Bakteri) 'berkomunikasi' satu sama lain untuk menyerang tanaman?
+Bakteri Xoo menggunakan sinyal kimia yang disebut DSF (Diffusible Signaling Molecule) untuk 'berkomunikasi'. Sinyal ini mengatur bakteri untuk berubah dari hidup menyendiri menjadi berkelompok membentuk lapisan (biofilm), yang penting agar bisa menyebabkan penyakit.
+Apakah bakteri Xoo memiliki 'sensor' untuk mendeteksi senyawa dari tanaman padi?
+Ya, bakteri Xoo memiliki reseptor atau 'sensor' bernama OryR yang bisa mendeteksi senyawa kimia tertentu dari tanaman padi. Sensor ini membantu bakteri mengatur serangannya terhadap tanaman.
+Bagaimana bakteri Xoo bisa merusak dinding sel padi dan menekan sistem kekebalan padi?
+Bakteri Xoo mengeluarkan beberapa protein (seperti selulase, lipase, xilanase) yang bisa merusak dinding sel padi. Selain itu, bakteri ini juga mengeluarkan 'efektor' lain (seperti XopN, XopQ, XopX, XopZ) yang berfungsi untuk menekan atau mematikan sistem kekebalan alami tanaman padi.
+Apakah ada senyawa alami yang bisa membantu padi melawan Hawar Daun Bakteri tanpa membunuh bakteri secara langsung?
+Ya, penelitian menemukan dua senyawa (staurosporin dan naramycin) yang bisa menekan penyakit Hawar Daun Bakteri. Cara kerjanya bukan dengan membunuh bakteri Xoo secara langsung, tapi dengan meningkatkan sistem kekebalan tanaman padi itu sendiri.
+Mengapa penting untuk terus memantau dan mempelajari keragaman bakteri Xoo penyebab Hawar Daun Bakteri?
+Penting untuk terus memantau bakteri Xoo karena bakteri ini bisa berubah dan memiliki banyak jenis (pathotype). Dengan mempelajarinya, kita bisa mengembangkan cara pengendalian yang lebih baik dan tahan lama, misalnya dengan memilih kombinasi gen ketahanan padi yang tepat.
+Penyakit apa yang disebabkan bakteri Xanthomonas oryzae pv. oryzae di tanaman padi dan seberapa bahaya?
+Bakteri Xanthomonas oryzae pv. oryzae (biasa disebut Xoo) menyebabkan penyakit Hawar Daun Bakteri, sering juga disebut Bacterial Blight, pada padi. Penyakit ini sangat gawat dan jadi masalah besar buat petani padi di seluruh dunia karena bisa bikin gagal panen.
+Kenapa peneliti suka mempelajari hubungan antara padi dan bakteri Xoo?
+Padi dan bakteri Xoo (penyebab Hawar Daun Bakteri) itu seperti contoh yang bagus buat penelitian. Soalnya, peneliti sudah tahu banyak soal 'resep genetik' keduanya. Ditambah lagi, padi dan bakterinya ada banyak jenisnya, jadi seru untuk dipelajari bagaimana mereka saling mempengaruhi.
+Kalau cuaca panas, apakah padi jadi lebih gampang kena Hawar Daun Bakteri?
+Iya, kalau cuaca panas, kebanyakan 'tameng' alami (gen ketahanan) padi jadi kurang kuat melawan Hawar Daun Bakteri. Tapi, ada satu 'tameng' khusus bernama Xa7 yang katanya tetap kuat meskipun cuaca lagi panas-panasnya.
+Selain cuaca panas, apakah kekeringan juga bikin padi susah melawan Hawar Daun Bakteri?
+Betul, kekeringan juga bisa bikin 'tameng' alami padi (seperti gen Xa4 dan Xa7) jadi kurang ampuh melawan Hawar Daun Bakteri. Efeknya bisa beda-beda tergantung padinya.
+Bagaimana caranya supaya padi bisa tetap kuat melawan Hawar Daun Bakteri meskipun cuaca panas dan kering?
+Caranya, peneliti menggabungkan beberapa 'tameng' alami (gen ketahanan), misalnya Xa4 dan Xa7, dalam satu tanaman padi. Gabungan ini bikin padi jadi lebih jago melawan Hawar Daun Bakteri, sekalipun cuacanya lagi panas atau kering.
+Apa cara paling utama yang bisa diandalkan untuk mengatasi penyakit Hawar Daun Bakteri pada padi?
+Cara paling utama dan paling bisa diharapkan untuk melawan penyakit Hawar Daun Bakteri (Bacterial Blight) adalah dengan menanam jenis padi yang memang dari bibitnya sudah punya 'bekal' kuat (gen) untuk tahan penyakit itu.
+Dari mana peneliti dapat 'bekal' baru agar padi jadi tahan penyakit Hawar Daun Bakteri?
+Peneliti mencari 'bekal' atau gen ketahanan baru ini dari padi-padi liar yang masih satu keluarga dengan padi yang biasa kita tanam. Setelah ketemu, 'bekal' ini dicoba dimasukkan ke jenis padi bagus yang biasa ditanam petani.
+Apa itu TAL effector yang ada di bakteri Xanthomonas oryzae (Xoo)?
+TAL effector itu semacam 'alat' atau 'senjata' khusus berupa zat protein yang dikeluarkan bakteri Xoo ke dalam sel padi. 'Alat' ini membantu bakteri membuat padi jadi sakit.
+Bagaimana cara bakteri Xoo (penyebab Hawar Daun Bakteri) 'berkomunikasi' untuk menyerang padi bareng-bareng?
+Bakteri Xoo itu seperti punya 'bahasa sandi' berupa zat kimia yang disebut DSF. 'Bahasa sandi' ini membuat bakteri yang tadinya sendiri-sendiri jadi kumpul bareng dan membentuk semacam lapisan. Kalau sudah berkelompok begini, mereka jadi lebih kuat untuk membuat padi sakit.
+Apakah bakteri Xoo punya 'alat pendeteksi' untuk tahu kondisi tanaman padi?
+Iya, bakteri Xoo punya semacam 'sensor' yang namanya OryR. 'Sensor' ini bisa 'mencium' zat-zat kimia dari tanaman padi, yang kemudian membantu bakteri mengatur cara dan waktu terbaik untuk menyerang.
+Bagaimana bakteri Xoo bisa merusak padi dan bikin sistem pertahanan padi jadi lemah?
+Bakteri Xoo mengeluarkan beberapa zat (protein) yang bisa merusak 'kulit pelindung' (dinding sel) padi. Selain itu, bakteri ini juga punya 'alat' lain untuk melemahkan atau mematikan sistem pertahanan alami yang dimiliki tanaman padi.
+Adakah zat alami yang bisa bantu padi melawan Hawar Daun Bakteri tanpa harus membunuh bakterinya langsung?
+Ada, penelitian menemukan dua zat alami (namanya staurosporin dan naramycin) yang bisa bantu padi menekan penyakit Hawar Daun Bakteri. Zat ini tidak langsung membunuh bakterinya, tapi malah membuat sistem pertahanan tanaman padi itu sendiri jadi lebih kuat.
+Kenapa penting untuk terus mengawasi dan mempelajari bakteri Xoo penyebab Hawar Daun Bakteri?
+Penting sekali untuk terus mengawasi bakteri Xoo karena bakteri ini pintar berubah-ubah dan ada banyak macamnya. Kalau kita terus pelajari, kita bisa menemukan cara yang semakin bagus dan tahan lama untuk melawannya, misalnya dengan memilih jenis padi yang punya 'bekal' ketahanan paling cocok.

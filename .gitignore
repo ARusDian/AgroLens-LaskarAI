@@ -5,3 +5,6 @@ ImageClassification/processed_dataset/
 ImageClassification/saved_model/
 ImageClassification/tfjs_model/
 ImageClassification/tflite/
+ImageClassification/saved_model/
+__pycache__/
+**/__pycache__/
