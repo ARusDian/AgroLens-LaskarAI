@@ -1,0 +1,6081 @@
+{
+  "version": "1.0",
+  "truncation": null,
+  "padding": null,
+  "added_tokens": [
+    {
+      "id": 0,
+      "content": "<pad>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 1,
+      "content": "<s>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 2,
+      "content": "</s>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 3,
+      "content": "<unk>",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    }
+  ],
+  "normalizer": null,
+  "pre_tokenizer": {
+    "type": "ByteLevel",
+    "add_prefix_space": true,
+    "trim_offsets": true,
+    "use_regex": true
+  },
+  "post_processor": {
+    "type": "TemplateProcessing",
+    "single": [
+      {
+        "SpecialToken": {
+          "id": "<s>",
+          "type_id": 0
+        }
+      },
+      {
+        "Sequence": {
+          "id": "A",
+          "type_id": 0
+        }
+      },
+      {
+        "SpecialToken": {
+          "id": "</s>",
+          "type_id": 0
+        }
+      }
+    ],
+    "pair": [
+      {
+        "SpecialToken": {
+          "id": "<s>",
+          "type_id": 0
+        }
+      },
+      {
+        "Sequence": {
+          "id": "A",
+          "type_id": 0
+        }
+      },
+      {
+        "SpecialToken": {
+          "id": "</s>",
+          "type_id": 0
+        }
+      },
+      {
+        "SpecialToken": {
+          "id": "<s>",
+          "type_id": 0
+        }
+      },
+      {
+        "Sequence": {
+          "id": "B",
+          "type_id": 0
+        }
+      },
+      {
+        "SpecialToken": {
+          "id": "</s>",
+          "type_id": 0
+        }
+      }
+    ],
+    "special_tokens": {
+      "</s>": {
+        "id": "</s>",
+        "ids": [
+          2
+        ],
+        "tokens": [
+          "</s>"
+        ]
+      },
+      "<s>": {
+        "id": "<s>",
+        "ids": [
+          1
+        ],
+        "tokens": [
+          "<s>"
+        ]
+      }
+    }
+  },
+  "decoder": {
+    "type": "ByteLevel",
+    "add_prefix_space": true,
+    "trim_offsets": true,
+    "use_regex": true
+  },
+  "model": {
+    "type": "BPE",
+    "dropout": null,
+    "unk_token": null,
+    "continuing_subword_prefix": null,
+    "end_of_word_suffix": null,
+    "fuse_unk": false,
+    "byte_fallback": false,
+    "ignore_merges": false,
+    "vocab": {
+      "<pad>": 0,
+      "<s>": 1,
+      "</s>": 2,
+      "<unk>": 3,
+      "%": 4,
+      "(": 5,
+      ")": 6,
+      ",": 7,
+      "-": 8,
+      ".": 9,
+      "0": 10,
+      "1": 11,
+      "2": 12,
+      "3": 13,
+      "5": 14,
+      "7": 15,
+      "8": 16,
+      "?": 17,
+      "A": 18,
+      "B": 19,
+      "C": 20,
+      "D": 21,
+      "F": 22,
+      "G": 23,
+      "H": 24,
+      "I": 25,
+      "K": 26,
+      "L": 27,
+      "M": 28,
+      "P": 29,
+      "R": 30,
+      "S": 31,
+      "T": 32,
+      "V": 33,
+      "W": 34,
+      "X": 35,
+      "a": 36,
+      "b": 37,
+      "c": 38,
+      "d": 39,
+      "e": 40,
+      "f": 41,
+      "g": 42,
+      "h": 43,
+      "i": 44,
+      "j": 45,
+      "k": 46,
+      "l": 47,
+      "m": 48,
+      "n": 49,
+      "o": 50,
+      "p": 51,
+      "r": 52,
+      "s": 53,
+      "t": 54,
+      "u": 55,
+      "v": 56,
+      "w": 57,
+      "x": 58,
+      "y": 59,
+      "z": 60,
+      "°": 61,
+      "Â": 62,
+      "Ċ": 63,
+      "Ġ": 64,
+      "an": 65,
+      "en": 66,
+      "Ġp": 67,
+      "er": 68,
+      "Ġd": 69,
+      "Ġm": 70,
+      "Ġt": 71,
+      "un": 72,
+      "ak": 73,
+      "Ġb": 74,
+      "ang": 75,
+      "la": 76,
+      "ar": 77,
+      "Ġs": 78,
+      "eng": 79,
+      "da": 80,
+      "at": 81,
+      "am": 82,
+      "eny": 83,
+      "in": 84,
+      "si": 85,
+      "Ġy": 86,
+      "Ġyang": 87,
+      "Ġda": 88,
+      "em": 89,
+      "it": 90,
+      "Ġpa": 91,
+      "Ġdan": 92,
+      "li": 93,
+      "Ġk": 94,
+      "ro": 95,
+      "Ġpeny": 96,
+      "di": 97,
+      "ti": 98,
+      "akit": 99,
+      "Ġber": 100,
+      "ba": 101,
+      "ek": 102,
+      "ung": 103,
+      "ing": 104,
+      "ja": 105,
+      "Ġpenyakit": 106,
+      "pa": 107,
+      "as": 108,
+      "Ġpeng": 109,
+      "Ġtan": 110,
+      "han": 111,
+      "kan": 112,
+      "or": 113,
+      "tu": 114,
+      "ĠA": 115,
+      "ĠB": 116,
+      "Ġtanam": 117,
+      "pat": 118,
+      "Ġse": 119,
+      "Ġper": 120,
+      "Ġter": 121,
+      "ĠApa": 122,
+      "Ġtanaman": 123,
+      "ut": 124,
+      "Ġdaun": 125,
+      "Ġpada": 126,
+      "al": 127,
+      "fek": 128,
+      "st": 129,
+      "Ġmeng": 130,
+      "ama": 131,
+      "Ġpadi": 132,
+      "ga": 133,
+      "ur": 134,
+      "Ġa": 135,
+      "Ġmem": 136,
+      "Ġh": 137,
+      "Ġdi": 138,
+      "Ġdapat": 139,
+      "ungro": 140,
+      "el": 141,
+      "Ġv": 142,
+      "Ġmeny": 143,
+      "Ġtungro": 144,
+      "Ġbla": 145,
+      "ari": 146,
+      "bab": 147,
+      "ĠBa": 148,
+      "Ġblast": 149,
+      "ebab": 150,
+      "uh": 151,
+      "ĠP": 152,
+      "angan": 153,
+      "bu": 154,
+      "et": 155,
+      "gi": 156,
+      "ik": 157,
+      "Ġg": 158,
+      "enda": 159,
+      "Ġmen": 160,
+      "utama": 161,
+      "eb": 162,
+      "eja": 163,
+      "per": 164,
+      "Ġin": 165,
+      "Ġutama": 166,
+      "Ġsp": 167,
+      "feksi": 168,
+      "endali": 169,
+      "ejala": 170,
+      "asi": 171,
+      "gun": 172,
+      "im": 173,
+      "on": 174,
+      "ot": 175,
+      "us": 176,
+      "cak": 177,
+      "ol": 178,
+      "Ġl": 179,
+      "eri": 180,
+      "lam": 181,
+      "ara": 182,
+      "Ġbercak": 183,
+      "ebabkan": 184,
+      "ce": 185,
+      "teri": 186,
+      "war": 187,
+      "akan": 188,
+      "endalian": 189,
+      "ir": 190,
+      "wn": 191,
+      "ĠR": 192,
+      "ana": 193,
+      "Ġdeng": 194,
+      "Ġbro": 195,
+      "Ġsa": 196,
+      "Ġseper": 197,
+      "ebar": 198,
+      "Ġspot": 199,
+      "imana": 200,
+      "Ġdengan": 201,
+      "Ġbrown": 202,
+      "Ġseperti": 203,
+      "ela": 204,
+      "isi": 205,
+      "tor": 206,
+      "uk": 207,
+      "ya": 208,
+      "Ġc": 209,
+      "Ġj": 210,
+      "Ġser": 211,
+      "tuk": 212,
+      "gaimana": 213,
+      "ĠBagaimana": 214,
+      "ahan": 215,
+      "is": 216,
+      "kem": 217,
+      "na": 218,
+      "Ġe": 219,
+      "Ġf": 220,
+      "Ġat": 221,
+      "aruh": 222,
+      "Ġpengendalian": 223,
+      "Ġada": 224,
+      "Ġmenyebabkan": 225,
+      "Ġgejala": 226,
+      "kemb": 227,
+      "au": 228,
+      "aan": 229,
+      "ht": 230,
+      "ice": 231,
+      "pi": 232,
+      "uba": 233,
+      "ĠS": 234,
+      "Ġw": 235,
+      "Ġun": 236,
+      "Ġik": 237,
+      "Ġdari": 238,
+      "Ġbi": 239,
+      "infeksi": 240,
+      "lim": 241,
+      "Ġberwar": 242,
+      "ingk": 243,
+      "Ġmemp": 244,
+      "gunaan": 245,
+      "ole": 246,
+      "ĠRice": 247,
+      "Ġsaja": 248,
+      "Ġuntuk": 249,
+      "Ġiklim": 250,
+      "Ġberwarna": 251,
+      "ah": 252,
+      "cteri": 253,
+      "ght": 254,
+      "kla": 255,
+      "ola": 256,
+      "okla": 257,
+      "pak": 258,
+      "Ġr": 259,
+      "Ġla": 260,
+      "Ġor": 261,
+      "ant": 262,
+      "Ġte": 263,
+      "lah": 264,
+      "engaruh": 265,
+      "Ġdalam": 266,
+      "light": 267,
+      "tif": 268,
+      "ĠBlight": 269,
+      "Ġperkemb": 270,
+      "ĠBacteri": 271,
+      "uhu": 272,
+      "ĠPeny": 273,
+      "Ġcokla": 274,
+      "Ġefek": 275,
+      "Ġatau": 276,
+      "Ġmempengaruh": 277,
+      "Ġperkembangan": 278,
+      "ĠBacterial": 279,
+      "Ġcoklat": 280,
+      "Ġmempengaruhi": 281,
+      "ada": 282,
+      "ea": 283,
+      "lu": 284,
+      "mbu": 285,
+      "pu": 286,
+      "pan": 287,
+      "tan": 288,
+      "ua": 289,
+      "za": 290,
+      "ĠG": 291,
+      "Ġn": 292,
+      "Ġtahan": 293,
+      "aktor": 294,
+      "Ġsuhu": 295,
+      "Ġker": 296,
+      "Ġkel": 297,
+      "ungan": 298,
+      "Ġpenggunaan": 299,
+      "tumbu": 300,
+      "Ġpertumbu": 301,
+      "Ġterh": 302,
+      "urang": 303,
+      "Ġvari": 304,
+      "Ġvir": 305,
+      "Ġmenyebar": 306,
+      "etas": 307,
+      "ubahan": 308,
+      "oleh": 309,
+      "ĠPenyakit": 310,
+      "Ġefektif": 311,
+      "Ġpertumbuhan": 312,
+      "Ġvarietas": 313,
+      "Ġvirus": 314,
+      "bat": 315,
+      "cal": 316,
+      "cara": 317,
+      "es": 318,
+      "ul": 319,
+      "yza": 320,
+      "Ġoleh": 321,
+      "Ġpan": 322,
+      "Ġting": 323,
+      "aktu": 324,
+      "Ġba": 325,
+      "Ġsecara": 326,
+      "Ġterinfeksi": 327,
+      "elola": 328,
+      "ĠPeng": 329,
+      "Ġinfeksi": 330,
+      "gunakan": 331,
+      "Ġlingk": 332,
+      "elalu": 333,
+      "Ġadalah": 334,
+      "Ġwaktu": 335,
+      "Ġoryza": 336,
+      "adap": 337,
+      "ĠGejala": 338,
+      "Ġkelem": 339,
+      "Ġterhadap": 340,
+      "Ġtinggi": 341,
+      "Ġlingkungan": 342,
+      "elalui": 343,
+      "Ġoryzae": 344,
+      "Lea": 345,
+      "duk": 346,
+      "eli": 347,
+      "ho": 348,
+      "ogi": 349,
+      "sek": 350,
+      "uda": 351,
+      "ĠD": 352,
+      "ĠM": 353,
+      "Ġant": 354,
+      "ĠLea": 355,
+      "Ġmelalui": 356,
+      "Ġmeli": 357,
+      "amur": 358,
+      "ampak": 359,
+      "sida": 360,
+      "Ġpenyebar": 361,
+      "tik": 362,
+      "tisida": 363,
+      "bapan": 364,
+      "ingga": 365,
+      "jadi": 366,
+      "Ġmengurang": 367,
+      "Ġmemb": 368,
+      "Ġmemper": 369,
+      "Ġdis": 370,
+      "Ġinsek": 371,
+      "usakan": 372,
+      "ologi": 373,
+      "Ġjamur": 374,
+      "Ġserangan": 375,
+      "ĠScal": 376,
+      "Ġlain": 377,
+      "puti": 378,
+      "Ġkerusakan": 379,
+      "elolaan": 380,
+      "Ġkelembapan": 381,
+      "ĠLeaf": 382,
+      "Ġmeliputi": 383,
+      "Ġmengurangi": 384,
+      "Ġinsektisida": 385,
+      "ĠScald": 386,
+      "Faktor": 387,
+      "ag": 388,
+      "cul": 389,
+      "dang": 390,
+      "egi": 391,
+      "gen": 392,
+      "if": 393,
+      "ian": 394,
+      "nya": 395,
+      "rak": 396,
+      "rat": 397,
+      "risi": 398,
+      "tasi": 399,
+      "trat": 400,
+      "Ġ(": 401,
+      "ĠK": 402,
+      "Ġo": 403,
+      "ĠFaktor": 404,
+      "anya": 405,
+      "Ġpen": 406,
+      "Ġpro": 407,
+      "ereng": 408,
+      "ering": 409,
+      "Ġmun": 410,
+      "uning": 411,
+      "akteri": 412,
+      "Ġbakteri": 413,
+      "atur": 414,
+      "sis": 415,
+      "lik": 416,
+      "Ġke": 417,
+      "Ġkem": 418,
+      "Ġpenyebab": 419,
+      "ektor": 420,
+      "Ġpengelolaan": 421,
+      "Ġpertan": 422,
+      "Ġperubahan": 423,
+      "utrisi": 424,
+      "Ġmengering": 425,
+      "Ġha": 426,
+      "Ġhasi": 427,
+      "Ġhingga": 428,
+      "Ġdigunakan": 429,
+      "Ġvektor": 430,
+      "Ġjar": 431,
+      "Ġtepat": 432,
+      "Ġtepi": 433,
+      "Ġnutrisi": 434,
+      "Ġpanen": 435,
+      "Ġpenyebaran": 436,
+      "Ġdisebabkan": 437,
+      "trategi": 438,
+      "Ġmuncul": 439,
+      "Ġpertanian": 440,
+      "Ġhasil": 441,
+      "BV": 442,
+      "TBV": 443,
+      "ap": 444,
+      "aun": 445,
+      "ait": 446,
+      "abu": 447,
+      "adang": 448,
+      "be": 449,
+      "de": 450,
+      "dak": 451,
+      "gan": 452,
+      "ih": 453,
+      "ip": 454,
+      "ija": 455,
+      "idak": 456,
+      "mal": 457,
+      "om": 458,
+      "ode": 459,
+      "pti": 460,
+      "para": 461,
+      "ta": 462,
+      "ula": 463,
+      "uas": 464,
+      "ĠT": 465,
+      "Ġro": 466,
+      "antu": 467,
+      "ena": 468,
+      "ensi": 469,
+      "entan": 470,
+      "Ġprak": 471,
+      "erang": 472,
+      "erubahan": 473,
+      "Ġdampak": 474,
+      "Ġma": 475,
+      "Ġmet": 476,
+      "Ġmuda": 477,
+      "Ġtidak": 478,
+      "unkan": 479,
+      "Ġbes": 480,
+      "arena": 481,
+      "Ġstrategi": 482,
+      "atif": 483,
+      "Ġkon": 484,
+      "Ġkuning": 485,
+      "disi": 486,
+      "Ġberk": 487,
+      "baga": 488,
+      "ungisi": 489,
+      "ingan": 490,
+      "ase": 491,
+      "asanya": 492,
+      "ĠApak": 493,
+      "Ġsebaga": 494,
+      "Ġmengendali": 495,
+      "Ġmenginfeksi": 496,
+      "urunkan": 497,
+      "Ġabu": 498,
+      "Ġhija": 499,
+      "ĠPerubahan": 500,
+      "gian": 501,
+      "Ġgen": 502,
+      "Ġgela": 503,
+      "Ġmenduk": 504,
+      "Ġmenjadi": 505,
+      "Ġmenurunkan": 506,
+      "Ġini": 507,
+      "lami": 508,
+      "Ġserta": 509,
+      "Ġfaktor": 510,
+      "Ġfungisi": 511,
+      "Ġfase": 512,
+      "Ġwereng": 513,
+      "Ġbiasanya": 514,
+      "ingkat": 515,
+      "Ġrentan": 516,
+      "Ġbagian": 517,
+      "ĠPengendalian": 518,
+      "ĠDaun": 519,
+      "Ġmembantu": 520,
+      "Ġopti": 521,
+      "aturan": 522,
+      "Ġhawar": 523,
+      "Ġjaringan": 524,
+      "beda": 525,
+      "Ġrotasi": 526,
+      "Ġpraktik": 527,
+      "Ġmetode": 528,
+      "Ġbesar": 529,
+      "Ġkondisi": 530,
+      "ĠApakah": 531,
+      "Ġsebagai": 532,
+      "Ġmengendalikan": 533,
+      "Ġhijau": 534,
+      "Ġgelap": 535,
+      "Ġmendukung": 536,
+      "Ġfungisida": 537,
+      "Ġoptimal": 538,
+      "%.": 539,
+      "50": 540,
+      "SV": 541,
+      "TSV": 542,
+      "Xant": 543,
+      "ac": 544,
+      "az": 545,
+      "ben": 546,
+      "ci": 547,
+      "dem": 548,
+      "ed": 549,
+      "gari": 550,
+      "get": 551,
+      "hat": 552,
+      "has": 553,
+      "ic": 554,
+      "ibat": 555,
+      "iologi": 556,
+      "ilik": 557,
+      "ji": 558,
+      "juk": 559,
+      "ko": 560,
+      "kah": 561,
+      "kadang": 562,
+      "lo": 563,
+      "ling": 564,
+      "me": 565,
+      "mon": 566,
+      "no": 567,
+      "os": 568,
+      "obat": 569,
+      "otik": 570,
+      "por": 571,
+      "pangan": 572,
+      "plik": 573,
+      "ran": 574,
+      "sama": 575,
+      "sua": 576,
+      "tama": 577,
+      "um": 578,
+      "udi": 579,
+      "ual": 580,
+      "val": 581,
+      "wa": 582,
+      "Â°": 583,
+      "Ġ2": 584,
+      "Ġu": 585,
+      "Ġan": 586,
+      "Ġak": 587,
+      "Ġas": 588,
+      "Ġ50": 589,
+      "ĠXant": 590,
+      "ani": 591,
+      "any": 592,
+      "Ġpat": 593,
+      "eratif": 594,
+      "eros": 595,
+      "Ġtua": 596,
+      "Ġtul": 597,
+      "unjuk": 598,
+      "aku": 599,
+      "Ġbu": 600,
+      "Ġbuda": 601,
+      "angkah": 602,
+      "lai": 603,
+      "aran": 604,
+      "arti": 605,
+      "Ġsis": 606,
+      "ata": 607,
+      "ampa": 608,
+      "ampu": 609,
+      "ambat": 610,
+      "Ġyait": 611,
+      "itor": 612,
+      "Ġpaling": 613,
+      "Ġkek": 614,
+      "Ġket": 615,
+      "Ġkea": 616,
+      "Ġkurang": 617,
+      "Ġkarena": 618,
+      "Ġkhas": 619,
+      "Ġklo": 620,
+      "rosis": 621,
+      "dil": 622,
+      "Ġberkemb": 623,
+      "Ġberbeda": 624,
+      "Ġbergari": 625,
+      "Ġbersama": 626,
+      "asuk": 627,
+      "Ġpengaruh": 628,
+      "Ġpengaturan": 629,
+      "Ġpengobat": 630,
+      "ora": 631,
+      "Ġsesua": 632,
+      "Ġters": 633,
+      "Ġterutama": 634,
+      "Ġterjadi": 635,
+      "Ġmenggunakan": 636,
+      "gah": 637,
+      "urangan": 638,
+      "Ġapa": 639,
+      "Ġair": 640,
+      "Ġalami": 641,
+      "Ġaplik": 642,
+      "Ġmemilik": 643,
+      "Ġhama": 644,
+      "Ġmenyerang": 645,
+      "buan": 646,
+      "etani": 647,
+      "Ġmence": 648,
+      "Ġmenunjuk": 649,
+      "ebih": 650,
+      "Ġspora": 651,
+      "onaz": 652,
+      "onitor": 653,
+      "Ġluas": 654,
+      "Ġlebih": 655,
+      "cepat": 656,
+      "iri": 657,
+      "ĠRTBV": 658,
+      "Ġsaat": 659,
+      "elah": 660,
+      "isiko": 661,
+      "Ġcara": 662,
+      "Ġsering": 663,
+      "ahanan": 664,
+      "isme": 665,
+      "Ġepi": 666,
+      "Ġatas": 667,
+      "ubah": 668,
+      "Ġbiologi": 669,
+      "Ġbiji": 670,
+      "Ġrisiko": 671,
+      "Ġlapangan": 672,
+      "Ġorgan": 673,
+      "Ġkerdil": 674,
+      "Ġbaik": 675,
+      "ĠPenggunaan": 676,
+      "duksi": 677,
+      "homon": 678,
+      "Ġantar": 679,
+      "Ġantara": 680,
+      "Ġlainnya": 681,
+      "agno": 682,
+      "Ġpenula": 683,
+      "Ġproduksi": 684,
+      "Ġkepara": 685,
+      "Ġkemudi": 686,
+      "ĠTungro": 687,
+      "Ġmalai": 688,
+      "Ġgeneratif": 689,
+      "bentuk": 690,
+      "cil": 691,
+      "demiologi": 692,
+      "Ġakibat": 693,
+      "ĠXanthomon": 694,
+      "erosot": 695,
+      "Ġtulang": 696,
+      "Ġbudaya": 697,
+      "Ġsisa": 698,
+      "Ġyaitu": 699,
+      "Ġkekurangan": 700,
+      "Ġketahanan": 701,
+      "Ġkeabuan": 702,
+      "Ġklorosis": 703,
+      "Ġberkembang": 704,
+      "Ġbergaris": 705,
+      "Ġbersamaan": 706,
+      "Ġpengobatan": 707,
+      "Ġsesuai": 708,
+      "Ġaplikasi": 709,
+      "Ġmemiliki": 710,
+      "Ġmencegah": 711,
+      "Ġmenunjukkan": 712,
+      "onazole": 713,
+      "onitoring": 714,
+      "Ġepidemiologi": 715,
+      "Ġbiologis": 716,
+      "agnosis": 717,
+      "Ġpenularan": 718,
+      "Ġkeparahan": 719,
+      "Ġkemudian": 720,
+      "ĠXanthomonas": 721,
+      ").": 722,
+      "17": 723,
+      "28": 724,
+      "Aza": 725,
+      "Hel": 726,
+      "In": 727,
+      "RTBV": 728,
+      "RTSV": 729,
+      "Wereng": 730,
+      "aat": 731,
+      "apa": 732,
+      "aya": 733,
+      "api": 734,
+      "alah": 735,
+      "apan": 736,
+      "alami": 737,
+      "awa": 738,
+      "bi": 739,
+      "bo": 740,
+      "bungan": 741,
+      "bes": 742,
+      "ca": 743,
+      "co": 744,
+      "cen": 745,
+      "cem": 746,
+      "cet": 747,
+      "com": 748,
+      "ciri": 749,
+      "conazole": 750,
+      "dw": 751,
+      "der": 752,
+      "dara": 753,
+      "dua": 754,
+      "ex": 755,
+      "esi": 756,
+      "edi": 757,
+      "epan": 758,
+      "eed": 759,
+      "eget": 760,
+      "eval": 761,
+      "for": 762,
+      "fur": 763,
+      "fik": 764,
+      "fologi": 765,
+      "gr": 766,
+      "gu": 767,
+      "he": 768,
+      "hel": 769,
+      "heri": 770,
+      "his": 771,
+      "hingga": 772,
+      "hambat": 773,
+      "ia": 774,
+      "idi": 775,
+      "ihan": 776,
+      "ist": 777,
+      "ibu": 778,
+      "ilam": 779,
+      "ium": 780,
+      "jung": 781,
+      "jut": 782,
+      "jangan": 783,
+      "jon": 784,
+      "ku": 785,
+      "kin": 786,
+      "ksi": 787,
+      "kon": 788,
+      "kait": 789,
+      "kip": 790,
+      "le": 791,
+      "lan": 792,
+      "lkan": 793,
+      "lus": 794,
+      "lanya": 795,
+      "laku": 796,
+      "langkah": 797,
+      "ma": 798,
+      "min": 799,
+      "mula": 800,
+      "masuk": 801,
+      "ni": 802,
+      "odi": 803,
+      "ous": 804,
+      "ogen": 805,
+      "ogr": 806,
+      "pun": 807,
+      "put": 808,
+      "pel": 809,
+      "pot": 810,
+      "ptasi": 811,
+      "ris": 812,
+      "rac": 813,
+      "ric": 814,
+      "redi": 815,
+      "ribu": 816,
+      "sung": 817,
+      "sasi": 818,
+      "ses": 819,
+      "spor": 820,
+      "sual": 821,
+      "ten": 822,
+      "tar": 823,
+      "tas": 824,
+      "tal": 825,
+      "tho": 826,
+      "tensi": 827,
+      "telah": 828,
+      "the": 829,
+      "tous": 830,
+      "uti": 831,
+      "upa": 832,
+      "utu": 833,
+      "uga": 834,
+      "uasi": 835,
+      "ubungan": 836,
+      "vit": 837,
+      "vari": 838,
+      "yat": 839,
+      "ycet": 840,
+      "zeb": 841,
+      "Ġit": 842,
+      "Ġek": 843,
+      "Ġja": 844,
+      "Ġal": 845,
+      "Ġlam": 846,
+      "Ġuk": 847,
+      "Ġarti": 848,
+      "Ġcepat": 849,
+      "Ġ17": 850,
+      "ĠHel": 851,
+      "ĠIn": 852,
+      "ĠWereng": 853,
+      "anda": 854,
+      "anit": 855,
+      "annya": 856,
+      "anco": 857,
+      "anjut": 858,
+      "enis": 859,
+      "enih": 860,
+      "entous": 861,
+      "Ġpv": 862,
+      "Ġpus": 863,
+      "Ġpola": 864,
+      "Ġpetani": 865,
+      "Ġputi": 866,
+      "erangan": 867,
+      "erah": 868,
+      "erap": 869,
+      "erapan": 870,
+      "Ġdua": 871,
+      "Ġmas": 872,
+      "Ġmor": 873,
+      "Ġmel": 874,
+      "Ġmik": 875,
+      "Ġmir": 876,
+      "Ġmau": 877,
+      "Ġmes": 878,
+      "Ġmampu": 879,
+      "Ġmerosot": 880,
+      "Ġmonitoring": 881,
+      "Ġmodi": 882,
+      "Ġmanco": 883,
+      "Ġtam": 884,
+      "Ġtet": 885,
+      "Ġtampak": 886,
+      "Ġtingkat": 887,
+      "Ġtelah": 888,
+      "unuh": 889,
+      "Ġbel": 890,
+      "Ġbany": 891,
+      "Ġbenih": 892,
+      "angat": 893,
+      "angga": 894,
+      "anggu": 895,
+      "angsung": 896,
+      "laput": 897,
+      "arat": 898,
+      "arbo": 899,
+      "Ġsem": 900,
+      "Ġsek": 901,
+      "Ġsik": 902,
+      "Ġsteri": 903,
+      "Ġsuk": 904,
+      "Ġsif": 905,
+      "Ġsingkat": 906,
+      "Ġsampa": 907,
+      "Ġsist": 908,
+      "Ġstal": 909,
+      "Ġsanit": 910,
+      "engapa": 911,
+      "atu": 912,
+      "atan": 913,
+      "amatan": 914,
+      "Ġdaerah": 915,
+      "embab": 916,
+      "emik": 917,
+      "emampu": 918,
+      "empel": 919,
+      "itar": 920,
+      "itro": 921,
+      "lir": 922,
+      "lihat": 923,
+      "lifor": 924,
+      "lisasi": 925,
+      "Ġkim": 926,
+      "Ġkadang": 927,
+      "Ġkata": 928,
+      "Ġkutu": 929,
+      "Ġkarat": 930,
+      "roor": 931,
+      "diagnosis": 932,
+      "dica": 933,
+      "dirac": 934,
+      "tivit": 935,
+      "Ġberaturan": 936,
+      "Ġberarti": 937,
+      "Ġberubah": 938,
+      "Ġberbentuk": 939,
+      "Ġberpot": 940,
+      "Ġberupa": 941,
+      "Ġbervari": 942,
+      "bawa": 943,
+      "ekom": 944,
+      "eksual": 945,
+      "ungkin": 946,
+      "Ġpengisi": 947,
+      "Ġpenghis": 948,
+      "Ġpengamatan": 949,
+      "Ġtanah": 950,
+      "orany": 951,
+      "ĠBip": 952,
+      "Ġsedang": 953,
+      "Ġsehat": 954,
+      "Ġsehingga": 955,
+      "Ġsetelah": 956,
+      "Ġselaput": 957,
+      "Ġperan": 958,
+      "Ġperbeda": 959,
+      "Ġpertama": 960,
+      "Ġterkadang": 961,
+      "Ġterbentuk": 962,
+      "Ġterkait": 963,
+      "Ġtermasuk": 964,
+      "Ġterten": 965,
+      "Ġterlihat": 966,
+      "Ġterbawa": 967,
+      "strak": 968,
+      "stensi": 969,
+      "stribu": 970,
+      "Ġmengelola": 971,
+      "Ġmenguning": 972,
+      "Ġmengatur": 973,
+      "Ġmengaku": 974,
+      "Ġmengubah": 975,
+      "Ġmengalami": 976,
+      "Ġmenghambat": 977,
+      "uran": 978,
+      "Ġagen": 979,
+      "Ġabi": 980,
+      "Ġmembu": 981,
+      "Ġmemasuk": 982,
+      "Ġhari": 983,
+      "Ġhampa": 984,
+      "Ġhex": 985,
+      "Ġhubungan": 986,
+      "Ġhangat": 987,
+      "Ġdiagnosis": 988,
+      "Ġdiawa": 989,
+      "Ġdieval": 990,
+      "Ġdilaku": 991,
+      "Ġdimula": 992,
+      "Ġdistribu": 993,
+      "elanjut": 994,
+      "Ġvis": 995,
+      "Ġveget": 996,
+      "Ġmenyatu": 997,
+      "ĠBahan": 998,
+      "ĠPada": 999,
+      "ĠPetani": 1000,
+      "bulkan": 1001,
+      "ikel": 1002,
+      "Ġganda": 1003,
+      "Ġganggu": 1004,
+      "endah": 1005,
+      "endasi": 1006,
+      "Ġmenim": 1007,
+      "Ġmeningkat": 1008,
+      "Ġmenerap": 1009,
+      "Ġmenempel": 1010,
+      "Ġmendiagnosis": 1011,
+      "ebut": 1012,
+      "ebihan": 1013,
+      "ejalanya": 1014,
+      "Ġintensi": 1015,
+      "Ġindica": 1016,
+      "Ġspp": 1017,
+      "Ġspheri": 1018,
+      "imba": 1019,
+      "onis": 1020,
+      "onjon": 1021,
+      "onogr": 1022,
+      "Ġlangkah": 1023,
+      "Ġlangsung": 1024,
+      "Ġlembab": 1025,
+      "Ġlonjon": 1026,
+      "warni": 1027,
+      "ĠRTSV": 1028,
+      "Ġsalah": 1029,
+      "isisi": 1030,
+      "Ġciri": 1031,
+      "Ġjuga": 1032,
+      "Ġjenis": 1033,
+      "Ġserangga": 1034,
+      "isar": 1035,
+      "napor": 1036,
+      "Ġfilam": 1037,
+      "Ġadaptasi": 1038,
+      "hta": 1039,
+      "piconazole": 1040,
+      "pilan": 1041,
+      "ĠSuhu": 1042,
+      "ĠStrategi": 1043,
+      "ĠSaat": 1044,
+      "ĠSerangan": 1045,
+      "Ġbiotik": 1046,
+      "Ġbiaya": 1047,
+      "Ġmempredi": 1048,
+      "olaris": 1049,
+      "Ġresi": 1050,
+      "Ġrekom": 1051,
+      "Ġrendah": 1052,
+      "Ġlahan": 1053,
+      "tifeed": 1054,
+      "ĠPenyebab": 1055,
+      "Ġefektivit": 1056,
+      "luas": 1057,
+      "ĠGejalanya": 1058,
+      "Ġnon": 1059,
+      "Ġnitro": 1060,
+      "Ġnimba": 1061,
+      "Ġkelebihan": 1062,
+      "Ġterhambat": 1063,
+      "Ġmenyebarkan": 1064,
+      "Ġpanic": 1065,
+      "Ġpanikel": 1066,
+      "Ġbacil": 1067,
+      "ĠPengelolaan": 1068,
+      "Ġkelemahan": 1069,
+      "hogen": 1070,
+      "hoder": 1071,
+      "ĠDimana": 1072,
+      "ĠDampak": 1073,
+      "ĠMelalui": 1074,
+      "ĠMag": 1075,
+      "ĠMonitoring": 1076,
+      "ĠMengapa": 1077,
+      "ĠMonogr": 1078,
+      "Ġantag": 1079,
+      "Ġmembed": 1080,
+      "Ġmembunuh": 1081,
+      "Ġmemperoleh": 1082,
+      "Ġmemperpara": 1083,
+      "Ġmempercepat": 1084,
+      "Ġmemperku": 1085,
+      "Ġmemperluas": 1086,
+      "Ġdisaran": 1087,
+      "ĠKarena": 1088,
+      "ĠKata": 1089,
+      "ĠKarbo": 1090,
+      "ĠKemampu": 1091,
+      "Ġoval": 1092,
+      "Ġpencem": 1093,
+      "Ġpenerapan": 1094,
+      "Ġproses": 1095,
+      "Ġpropiconazole": 1096,
+      "Ġkecil": 1097,
+      "Ġkedua": 1098,
+      "Ġkemerosot": 1099,
+      "Ġkemungkin": 1100,
+      "Ġhayat": 1101,
+      "Ġjarak": 1102,
+      "aphel": 1103,
+      "ganisme": 1104,
+      "omik": 1105,
+      "ĠTric": 1106,
+      "Ġmalam": 1107,
+      "Ġberkepan": 1108,
+      "Ġberkelanjut": 1109,
+      "Ġberkisar": 1110,
+      "Ġgenomik": 1111,
+      "aconazole": 1112,
+      "Ġ20": 1113,
+      "Ġ23": 1114,
+      "Ġudara": 1115,
+      "Ġujung": 1116,
+      "Ġanakan": 1117,
+      "Ġantifeed": 1118,
+      "Ġascom": 1119,
+      "Ġaseksual": 1120,
+      "Ġpatogen": 1121,
+      "Ġpathogen": 1122,
+      "Ġbuah": 1123,
+      "Ġbulir": 1124,
+      "Ġterserang": 1125,
+      "Ġtersebut": 1126,
+      "Ġorganik": 1127,
+      "Ġorganisme": 1128,
+      "Azadirac": 1129,
+      "bescen": 1130,
+      "dwal": 1131,
+      "furam": 1132,
+      "fikasi": 1133,
+      "idia": 1134,
+      "konidia": 1135,
+      "kipun": 1136,
+      "mintho": 1137,
+      "sporium": 1138,
+      "target": 1139,
+      "ycete": 1140,
+      "Ġitu": 1141,
+      "Ġekstrak": 1142,
+      "Ġjadwal": 1143,
+      "Ġalbescen": 1144,
+      "Ġlama": 1145,
+      "Ġukuran": 1146,
+      "ĠHelmintho": 1147,
+      "ĠInfeksi": 1148,
+      "Ġpusat": 1149,
+      "Ġputih": 1150,
+      "Ġmasalah": 1151,
+      "Ġmorfologi": 1152,
+      "Ġmeluas": 1153,
+      "Ġmikroor": 1154,
+      "Ġmirip": 1155,
+      "Ġmaupun": 1156,
+      "Ġmeskipun": 1157,
+      "Ġmodifikasi": 1158,
+      "Ġmancozeb": 1159,
+      "Ġtampilan": 1160,
+      "Ġtetapi": 1161,
+      "Ġbelum": 1162,
+      "Ġbanyak": 1163,
+      "Ġsemua": 1164,
+      "Ġsekitar": 1165,
+      "Ġsiklus": 1166,
+      "Ġsterilisasi": 1167,
+      "Ġsukun": 1168,
+      "Ġsifat": 1169,
+      "Ġsampai": 1170,
+      "Ġsistemik": 1171,
+      "Ġstalk": 1172,
+      "Ġsanitasi": 1173,
+      "liform": 1174,
+      "Ġkimia": 1175,
+      "Ġberpotensi": 1176,
+      "Ġbervariasi": 1177,
+      "Ġpengisian": 1178,
+      "Ġpenghisap": 1179,
+      "oranye": 1180,
+      "ĠBipolaris": 1181,
+      "Ġsedangkan": 1182,
+      "Ġperbedaan": 1183,
+      "Ġterbentuknya": 1184,
+      "Ġtertentu": 1185,
+      "Ġmengakuisisi": 1186,
+      "Ġabiotik": 1187,
+      "Ġmembuat": 1188,
+      "Ġmemasuki": 1189,
+      "Ġhexaconazole": 1190,
+      "Ġdiawali": 1191,
+      "Ġdievaluasi": 1192,
+      "Ġdilakukan": 1193,
+      "Ġdimulai": 1194,
+      "Ġdistribusi": 1195,
+      "Ġvisual": 1196,
+      "Ġvegetatif": 1197,
+      "Ġgangguan": 1198,
+      "Ġmenimbulkan": 1199,
+      "Ġmeningkatkan": 1200,
+      "Ġmenerapkan": 1201,
+      "Ġintensitas": 1202,
+      "Ġspherical": 1203,
+      "Ġlonjong": 1204,
+      "naporthe": 1205,
+      "Ġfilamentous": 1206,
+      "Ġmemprediksi": 1207,
+      "Ġresistensi": 1208,
+      "Ġrekomendasi": 1209,
+      "Ġefektivitas": 1210,
+      "Ġnitrogen": 1211,
+      "Ġpanicle": 1212,
+      "Ġbacilliform": 1213,
+      "hoderma": 1214,
+      "ĠMagnaporthe": 1215,
+      "ĠMonographel": 1216,
+      "Ġantagonis": 1217,
+      "Ġmembedakan": 1218,
+      "Ġmemperparah": 1219,
+      "Ġmemperkuat": 1220,
+      "Ġdisarankan": 1221,
+      "ĠKarbofuram": 1222,
+      "ĠKemampuannya": 1223,
+      "Ġpencemaran": 1224,
+      "Ġkemerosotan": 1225,
+      "Ġkemungkinan": 1226,
+      "Ġhayati": 1227,
+      "ĠTrichoderma": 1228,
+      "Ġberkepanjangan": 1229,
+      "Ġberkelanjutan": 1230,
+      "Ġantifeedant": 1231,
+      "Ġascomycete": 1232,
+      "Azadirachta": 1233,
+      "Ġalbescens": 1234,
+      "ĠHelminthosporium": 1235,
+      "Ġmikroorganisme": 1236,
+      "ĠMonographella": 1237
+    },
+    "merges": [
+      [
+        "a",
+        "n"
+      ],
+      [
+        "e",
+        "n"
+      ],
+      [
+        "Ġ",
+        "p"
+      ],
+      [
+        "e",
+        "r"
+      ],
+      [
+        "Ġ",
+        "d"
+      ],
+      [
+        "Ġ",
+        "m"
+      ],
+      [
+        "Ġ",
+        "t"
+      ],
+      [
+        "u",
+        "n"
+      ],
+      [
+        "a",
+        "k"
+      ],
+      [
+        "Ġ",
+        "b"
+      ],
+      [
+        "an",
+        "g"
+      ],
+      [
+        "l",
+        "a"
+      ],
+      [
+        "a",
+        "r"
+      ],
+      [
+        "Ġ",
+        "s"
+      ],
+      [
+        "en",
+        "g"
+      ],
+      [
+        "d",
+        "a"
+      ],
+      [
+        "a",
+        "t"
+      ],
+      [
+        "a",
+        "m"
+      ],
+      [
+        "en",
+        "y"
+      ],
+      [
+        "i",
+        "n"
+      ],
+      [
+        "s",
+        "i"
+      ],
+      [
+        "Ġ",
+        "y"
+      ],
+      [
+        "Ġy",
+        "ang"
+      ],
+      [
+        "Ġd",
+        "a"
+      ],
+      [
+        "e",
+        "m"
+      ],
+      [
+        "i",
+        "t"
+      ],
+      [
+        "Ġp",
+        "a"
+      ],
+      [
+        "Ġd",
+        "an"
+      ],
+      [
+        "l",
+        "i"
+      ],
+      [
+        "Ġ",
+        "k"
+      ],
+      [
+        "r",
+        "o"
+      ],
+      [
+        "Ġp",
+        "eny"
+      ],
+      [
+        "d",
+        "i"
+      ],
+      [
+        "t",
+        "i"
+      ],
+      [
+        "ak",
+        "it"
+      ],
+      [
+        "Ġb",
+        "er"
+      ],
+      [
+        "b",
+        "a"
+      ],
+      [
+        "e",
+        "k"
+      ],
+      [
+        "un",
+        "g"
+      ],
+      [
+        "in",
+        "g"
+      ],
+      [
+        "j",
+        "a"
+      ],
+      [
+        "Ġpeny",
+        "akit"
+      ],
+      [
+        "p",
+        "a"
+      ],
+      [
+        "a",
+        "s"
+      ],
+      [
+        "Ġp",
+        "eng"
+      ],
+      [
+        "Ġt",
+        "an"
+      ],
+      [
+        "h",
+        "an"
+      ],
+      [
+        "k",
+        "an"
+      ],
+      [
+        "o",
+        "r"
+      ],
+      [
+        "t",
+        "u"
+      ],
+      [
+        "Ġ",
+        "A"
+      ],
+      [
+        "Ġ",
+        "B"
+      ],
+      [
+        "Ġtan",
+        "am"
+      ],
+      [
+        "p",
+        "at"
+      ],
+      [
+        "Ġs",
+        "e"
+      ],
+      [
+        "Ġp",
+        "er"
+      ],
+      [
+        "Ġt",
+        "er"
+      ],
+      [
+        "ĠA",
+        "pa"
+      ],
+      [
+        "Ġtanam",
+        "an"
+      ],
+      [
+        "u",
+        "t"
+      ],
+      [
+        "Ġda",
+        "un"
+      ],
+      [
+        "Ġpa",
+        "da"
+      ],
+      [
+        "a",
+        "l"
+      ],
+      [
+        "f",
+        "ek"
+      ],
+      [
+        "s",
+        "t"
+      ],
+      [
+        "Ġm",
+        "eng"
+      ],
+      [
+        "am",
+        "a"
+      ],
+      [
+        "Ġpa",
+        "di"
+      ],
+      [
+        "g",
+        "a"
+      ],
+      [
+        "u",
+        "r"
+      ],
+      [
+        "Ġ",
+        "a"
+      ],
+      [
+        "Ġm",
+        "em"
+      ],
+      [
+        "Ġ",
+        "h"
+      ],
+      [
+        "Ġd",
+        "i"
+      ],
+      [
+        "Ġda",
+        "pat"
+      ],
+      [
+        "ung",
+        "ro"
+      ],
+      [
+        "e",
+        "l"
+      ],
+      [
+        "Ġ",
+        "v"
+      ],
+      [
+        "Ġm",
+        "eny"
+      ],
+      [
+        "Ġt",
+        "ungro"
+      ],
+      [
+        "Ġb",
+        "la"
+      ],
+      [
+        "ar",
+        "i"
+      ],
+      [
+        "ba",
+        "b"
+      ],
+      [
+        "ĠB",
+        "a"
+      ],
+      [
+        "Ġbla",
+        "st"
+      ],
+      [
+        "e",
+        "bab"
+      ],
+      [
+        "u",
+        "h"
+      ],
+      [
+        "Ġ",
+        "P"
+      ],
+      [
+        "ang",
+        "an"
+      ],
+      [
+        "b",
+        "u"
+      ],
+      [
+        "e",
+        "t"
+      ],
+      [
+        "g",
+        "i"
+      ],
+      [
+        "i",
+        "k"
+      ],
+      [
+        "Ġ",
+        "g"
+      ],
+      [
+        "en",
+        "da"
+      ],
+      [
+        "Ġm",
+        "en"
+      ],
+      [
+        "ut",
+        "ama"
+      ],
+      [
+        "e",
+        "b"
+      ],
+      [
+        "e",
+        "ja"
+      ],
+      [
+        "p",
+        "er"
+      ],
+      [
+        "Ġ",
+        "in"
+      ],
+      [
+        "Ġ",
+        "utama"
+      ],
+      [
+        "Ġs",
+        "p"
+      ],
+      [
+        "fek",
+        "si"
+      ],
+      [
+        "enda",
+        "li"
+      ],
+      [
+        "eja",
+        "la"
+      ],
+      [
+        "a",
+        "si"
+      ],
+      [
+        "g",
+        "un"
+      ],
+      [
+        "i",
+        "m"
+      ],
+      [
+        "o",
+        "n"
+      ],
+      [
+        "o",
+        "t"
+      ],
+      [
+        "u",
+        "s"
+      ],
+      [
+        "c",
+        "ak"
+      ],
+      [
+        "o",
+        "l"
+      ],
+      [
+        "Ġ",
+        "l"
+      ],
+      [
+        "er",
+        "i"
+      ],
+      [
+        "la",
+        "m"
+      ],
+      [
+        "ar",
+        "a"
+      ],
+      [
+        "Ġber",
+        "cak"
+      ],
+      [
+        "ebab",
+        "kan"
+      ],
+      [
+        "c",
+        "e"
+      ],
+      [
+        "t",
+        "eri"
+      ],
+      [
+        "w",
+        "ar"
+      ],
+      [
+        "ak",
+        "an"
+      ],
+      [
+        "endali",
+        "an"
+      ],
+      [
+        "i",
+        "r"
+      ],
+      [
+        "w",
+        "n"
+      ],
+      [
+        "Ġ",
+        "R"
+      ],
+      [
+        "an",
+        "a"
+      ],
+      [
+        "Ġd",
+        "eng"
+      ],
+      [
+        "Ġb",
+        "ro"
+      ],
+      [
+        "Ġs",
+        "a"
+      ],
+      [
+        "Ġse",
+        "per"
+      ],
+      [
+        "eb",
+        "ar"
+      ],
+      [
+        "Ġsp",
+        "ot"
+      ],
+      [
+        "im",
+        "ana"
+      ],
+      [
+        "Ġdeng",
+        "an"
+      ],
+      [
+        "Ġbro",
+        "wn"
+      ],
+      [
+        "Ġseper",
+        "ti"
+      ],
+      [
+        "e",
+        "la"
+      ],
+      [
+        "i",
+        "si"
+      ],
+      [
+        "t",
+        "or"
+      ],
+      [
+        "u",
+        "k"
+      ],
+      [
+        "y",
+        "a"
+      ],
+      [
+        "Ġ",
+        "c"
+      ],
+      [
+        "Ġ",
+        "j"
+      ],
+      [
+        "Ġs",
+        "er"
+      ],
+      [
+        "tu",
+        "k"
+      ],
+      [
+        "ga",
+        "imana"
+      ],
+      [
+        "ĠBa",
+        "gaimana"
+      ],
+      [
+        "a",
+        "han"
+      ],
+      [
+        "i",
+        "s"
+      ],
+      [
+        "k",
+        "em"
+      ],
+      [
+        "n",
+        "a"
+      ],
+      [
+        "Ġ",
+        "e"
+      ],
+      [
+        "Ġ",
+        "f"
+      ],
+      [
+        "Ġ",
+        "at"
+      ],
+      [
+        "ar",
+        "uh"
+      ],
+      [
+        "Ġpeng",
+        "endalian"
+      ],
+      [
+        "Ġa",
+        "da"
+      ],
+      [
+        "Ġmeny",
+        "ebabkan"
+      ],
+      [
+        "Ġg",
+        "ejala"
+      ],
+      [
+        "kem",
+        "b"
+      ],
+      [
+        "a",
+        "u"
+      ],
+      [
+        "a",
+        "an"
+      ],
+      [
+        "h",
+        "t"
+      ],
+      [
+        "i",
+        "ce"
+      ],
+      [
+        "p",
+        "i"
+      ],
+      [
+        "u",
+        "ba"
+      ],
+      [
+        "Ġ",
+        "S"
+      ],
+      [
+        "Ġ",
+        "w"
+      ],
+      [
+        "Ġ",
+        "un"
+      ],
+      [
+        "Ġ",
+        "ik"
+      ],
+      [
+        "Ġd",
+        "ari"
+      ],
+      [
+        "Ġb",
+        "i"
+      ],
+      [
+        "in",
+        "feksi"
+      ],
+      [
+        "li",
+        "m"
+      ],
+      [
+        "Ġber",
+        "war"
+      ],
+      [
+        "ing",
+        "k"
+      ],
+      [
+        "Ġmem",
+        "p"
+      ],
+      [
+        "gun",
+        "aan"
+      ],
+      [
+        "ol",
+        "e"
+      ],
+      [
+        "ĠR",
+        "ice"
+      ],
+      [
+        "Ġsa",
+        "ja"
+      ],
+      [
+        "Ġun",
+        "tuk"
+      ],
+      [
+        "Ġik",
+        "lim"
+      ],
+      [
+        "Ġberwar",
+        "na"
+      ],
+      [
+        "a",
+        "h"
+      ],
+      [
+        "c",
+        "teri"
+      ],
+      [
+        "g",
+        "ht"
+      ],
+      [
+        "k",
+        "la"
+      ],
+      [
+        "o",
+        "la"
+      ],
+      [
+        "o",
+        "kla"
+      ],
+      [
+        "p",
+        "ak"
+      ],
+      [
+        "Ġ",
+        "r"
+      ],
+      [
+        "Ġ",
+        "la"
+      ],
+      [
+        "Ġ",
+        "or"
+      ],
+      [
+        "an",
+        "t"
+      ],
+      [
+        "Ġt",
+        "e"
+      ],
+      [
+        "la",
+        "h"
+      ],
+      [
+        "eng",
+        "aruh"
+      ],
+      [
+        "Ġda",
+        "lam"
+      ],
+      [
+        "li",
+        "ght"
+      ],
+      [
+        "ti",
+        "f"
+      ],
+      [
+        "ĠB",
+        "light"
+      ],
+      [
+        "Ġper",
+        "kemb"
+      ],
+      [
+        "ĠBa",
+        "cteri"
+      ],
+      [
+        "uh",
+        "u"
+      ],
+      [
+        "ĠP",
+        "eny"
+      ],
+      [
+        "Ġc",
+        "okla"
+      ],
+      [
+        "Ġe",
+        "fek"
+      ],
+      [
+        "Ġat",
+        "au"
+      ],
+      [
+        "Ġmemp",
+        "engaruh"
+      ],
+      [
+        "Ġperkemb",
+        "angan"
+      ],
+      [
+        "ĠBacteri",
+        "al"
+      ],
+      [
+        "Ġcokla",
+        "t"
+      ],
+      [
+        "Ġmempengaruh",
+        "i"
+      ],
+      [
+        "a",
+        "da"
+      ],
+      [
+        "e",
+        "a"
+      ],
+      [
+        "l",
+        "u"
+      ],
+      [
+        "m",
+        "bu"
+      ],
+      [
+        "p",
+        "u"
+      ],
+      [
+        "p",
+        "an"
+      ],
+      [
+        "t",
+        "an"
+      ],
+      [
+        "u",
+        "a"
+      ],
+      [
+        "z",
+        "a"
+      ],
+      [
+        "Ġ",
+        "G"
+      ],
+      [
+        "Ġ",
+        "n"
+      ],
+      [
+        "Ġt",
+        "ahan"
+      ],
+      [
+        "ak",
+        "tor"
+      ],
+      [
+        "Ġs",
+        "uhu"
+      ],
+      [
+        "Ġk",
+        "er"
+      ],
+      [
+        "Ġk",
+        "el"
+      ],
+      [
+        "ung",
+        "an"
+      ],
+      [
+        "Ġpeng",
+        "gunaan"
+      ],
+      [
+        "tu",
+        "mbu"
+      ],
+      [
+        "Ġper",
+        "tumbu"
+      ],
+      [
+        "Ġter",
+        "h"
+      ],
+      [
+        "ur",
+        "ang"
+      ],
+      [
+        "Ġv",
+        "ari"
+      ],
+      [
+        "Ġv",
+        "ir"
+      ],
+      [
+        "Ġmeny",
+        "ebar"
+      ],
+      [
+        "et",
+        "as"
+      ],
+      [
+        "uba",
+        "han"
+      ],
+      [
+        "ole",
+        "h"
+      ],
+      [
+        "ĠPeny",
+        "akit"
+      ],
+      [
+        "Ġefek",
+        "tif"
+      ],
+      [
+        "Ġpertumbu",
+        "han"
+      ],
+      [
+        "Ġvari",
+        "etas"
+      ],
+      [
+        "Ġvir",
+        "us"
+      ],
+      [
+        "b",
+        "at"
+      ],
+      [
+        "c",
+        "al"
+      ],
+      [
+        "c",
+        "ara"
+      ],
+      [
+        "e",
+        "s"
+      ],
+      [
+        "u",
+        "l"
+      ],
+      [
+        "y",
+        "za"
+      ],
+      [
+        "Ġ",
+        "oleh"
+      ],
+      [
+        "Ġp",
+        "an"
+      ],
+      [
+        "Ġt",
+        "ing"
+      ],
+      [
+        "ak",
+        "tu"
+      ],
+      [
+        "Ġb",
+        "a"
+      ],
+      [
+        "Ġse",
+        "cara"
+      ],
+      [
+        "Ġter",
+        "infeksi"
+      ],
+      [
+        "el",
+        "ola"
+      ],
+      [
+        "ĠP",
+        "eng"
+      ],
+      [
+        "Ġin",
+        "feksi"
+      ],
+      [
+        "gun",
+        "akan"
+      ],
+      [
+        "Ġl",
+        "ingk"
+      ],
+      [
+        "ela",
+        "lu"
+      ],
+      [
+        "Ġada",
+        "lah"
+      ],
+      [
+        "Ġw",
+        "aktu"
+      ],
+      [
+        "Ġor",
+        "yza"
+      ],
+      [
+        "ada",
+        "p"
+      ],
+      [
+        "ĠG",
+        "ejala"
+      ],
+      [
+        "Ġkel",
+        "em"
+      ],
+      [
+        "Ġterh",
+        "adap"
+      ],
+      [
+        "Ġting",
+        "gi"
+      ],
+      [
+        "Ġlingk",
+        "ungan"
+      ],
+      [
+        "elalu",
+        "i"
+      ],
+      [
+        "Ġoryza",
+        "e"
+      ],
+      [
+        "L",
+        "ea"
+      ],
+      [
+        "d",
+        "uk"
+      ],
+      [
+        "e",
+        "li"
+      ],
+      [
+        "h",
+        "o"
+      ],
+      [
+        "o",
+        "gi"
+      ],
+      [
+        "s",
+        "ek"
+      ],
+      [
+        "u",
+        "da"
+      ],
+      [
+        "Ġ",
+        "D"
+      ],
+      [
+        "Ġ",
+        "M"
+      ],
+      [
+        "Ġ",
+        "ant"
+      ],
+      [
+        "Ġ",
+        "Lea"
+      ],
+      [
+        "Ġm",
+        "elalui"
+      ],
+      [
+        "Ġm",
+        "eli"
+      ],
+      [
+        "am",
+        "ur"
+      ],
+      [
+        "am",
+        "pak"
+      ],
+      [
+        "si",
+        "da"
+      ],
+      [
+        "Ġpeny",
+        "ebar"
+      ],
+      [
+        "ti",
+        "k"
+      ],
+      [
+        "ti",
+        "sida"
+      ],
+      [
+        "ba",
+        "pan"
+      ],
+      [
+        "ing",
+        "ga"
+      ],
+      [
+        "ja",
+        "di"
+      ],
+      [
+        "Ġmeng",
+        "urang"
+      ],
+      [
+        "Ġmem",
+        "b"
+      ],
+      [
+        "Ġmem",
+        "per"
+      ],
+      [
+        "Ġdi",
+        "s"
+      ],
+      [
+        "Ġin",
+        "sek"
+      ],
+      [
+        "us",
+        "akan"
+      ],
+      [
+        "ol",
+        "ogi"
+      ],
+      [
+        "Ġj",
+        "amur"
+      ],
+      [
+        "Ġser",
+        "angan"
+      ],
+      [
+        "ĠS",
+        "cal"
+      ],
+      [
+        "Ġla",
+        "in"
+      ],
+      [
+        "pu",
+        "ti"
+      ],
+      [
+        "Ġker",
+        "usakan"
+      ],
+      [
+        "elola",
+        "an"
+      ],
+      [
+        "Ġkelem",
+        "bapan"
+      ],
+      [
+        "ĠLea",
+        "f"
+      ],
+      [
+        "Ġmeli",
+        "puti"
+      ],
+      [
+        "Ġmengurang",
+        "i"
+      ],
+      [
+        "Ġinsek",
+        "tisida"
+      ],
+      [
+        "ĠScal",
+        "d"
+      ],
+      [
+        "F",
+        "aktor"
+      ],
+      [
+        "a",
+        "g"
+      ],
+      [
+        "c",
+        "ul"
+      ],
+      [
+        "d",
+        "ang"
+      ],
+      [
+        "e",
+        "gi"
+      ],
+      [
+        "g",
+        "en"
+      ],
+      [
+        "i",
+        "f"
+      ],
+      [
+        "i",
+        "an"
+      ],
+      [
+        "n",
+        "ya"
+      ],
+      [
+        "r",
+        "ak"
+      ],
+      [
+        "r",
+        "at"
+      ],
+      [
+        "r",
+        "isi"
+      ],
+      [
+        "t",
+        "asi"
+      ],
+      [
+        "t",
+        "rat"
+      ],
+      [
+        "Ġ",
+        "("
+      ],
+      [
+        "Ġ",
+        "K"
+      ],
+      [
+        "Ġ",
+        "o"
+      ],
+      [
+        "Ġ",
+        "Faktor"
+      ],
+      [
+        "an",
+        "ya"
+      ],
+      [
+        "Ġp",
+        "en"
+      ],
+      [
+        "Ġp",
+        "ro"
+      ],
+      [
+        "er",
+        "eng"
+      ],
+      [
+        "er",
+        "ing"
+      ],
+      [
+        "Ġm",
+        "un"
+      ],
+      [
+        "un",
+        "ing"
+      ],
+      [
+        "ak",
+        "teri"
+      ],
+      [
+        "Ġb",
+        "akteri"
+      ],
+      [
+        "at",
+        "ur"
+      ],
+      [
+        "si",
+        "s"
+      ],
+      [
+        "li",
+        "k"
+      ],
+      [
+        "Ġk",
+        "e"
+      ],
+      [
+        "Ġk",
+        "em"
+      ],
+      [
+        "Ġpeny",
+        "ebab"
+      ],
+      [
+        "ek",
+        "tor"
+      ],
+      [
+        "Ġpeng",
+        "elolaan"
+      ],
+      [
+        "Ġper",
+        "tan"
+      ],
+      [
+        "Ġper",
+        "ubahan"
+      ],
+      [
+        "ut",
+        "risi"
+      ],
+      [
+        "Ġmeng",
+        "ering"
+      ],
+      [
+        "Ġh",
+        "a"
+      ],
+      [
+        "Ġh",
+        "asi"
+      ],
+      [
+        "Ġh",
+        "ingga"
+      ],
+      [
+        "Ġdi",
+        "gunakan"
+      ],
+      [
+        "Ġv",
+        "ektor"
+      ],
+      [
+        "Ġj",
+        "ar"
+      ],
+      [
+        "Ġte",
+        "pat"
+      ],
+      [
+        "Ġte",
+        "pi"
+      ],
+      [
+        "Ġn",
+        "utrisi"
+      ],
+      [
+        "Ġpan",
+        "en"
+      ],
+      [
+        "Ġpenyebar",
+        "an"
+      ],
+      [
+        "Ġdis",
+        "ebabkan"
+      ],
+      [
+        "trat",
+        "egi"
+      ],
+      [
+        "Ġmun",
+        "cul"
+      ],
+      [
+        "Ġpertan",
+        "ian"
+      ],
+      [
+        "Ġhasi",
+        "l"
+      ],
+      [
+        "B",
+        "V"
+      ],
+      [
+        "T",
+        "BV"
+      ],
+      [
+        "a",
+        "p"
+      ],
+      [
+        "a",
+        "un"
+      ],
+      [
+        "a",
+        "it"
+      ],
+      [
+        "a",
+        "bu"
+      ],
+      [
+        "a",
+        "dang"
+      ],
+      [
+        "b",
+        "e"
+      ],
+      [
+        "d",
+        "e"
+      ],
+      [
+        "d",
+        "ak"
+      ],
+      [
+        "g",
+        "an"
+      ],
+      [
+        "i",
+        "h"
+      ],
+      [
+        "i",
+        "p"
+      ],
+      [
+        "i",
+        "ja"
+      ],
+      [
+        "i",
+        "dak"
+      ],
+      [
+        "m",
+        "al"
+      ],
+      [
+        "o",
+        "m"
+      ],
+      [
+        "o",
+        "de"
+      ],
+      [
+        "p",
+        "ti"
+      ],
+      [
+        "p",
+        "ara"
+      ],
+      [
+        "t",
+        "a"
+      ],
+      [
+        "u",
+        "la"
+      ],
+      [
+        "u",
+        "as"
+      ],
+      [
+        "Ġ",
+        "T"
+      ],
+      [
+        "Ġ",
+        "ro"
+      ],
+      [
+        "an",
+        "tu"
+      ],
+      [
+        "en",
+        "a"
+      ],
+      [
+        "en",
+        "si"
+      ],
+      [
+        "en",
+        "tan"
+      ],
+      [
+        "Ġp",
+        "rak"
+      ],
+      [
+        "er",
+        "ang"
+      ],
+      [
+        "er",
+        "ubahan"
+      ],
+      [
+        "Ġd",
+        "ampak"
+      ],
+      [
+        "Ġm",
+        "a"
+      ],
+      [
+        "Ġm",
+        "et"
+      ],
+      [
+        "Ġm",
+        "uda"
+      ],
+      [
+        "Ġt",
+        "idak"
+      ],
+      [
+        "un",
+        "kan"
+      ],
+      [
+        "Ġb",
+        "es"
+      ],
+      [
+        "ar",
+        "ena"
+      ],
+      [
+        "Ġs",
+        "trategi"
+      ],
+      [
+        "at",
+        "if"
+      ],
+      [
+        "Ġk",
+        "on"
+      ],
+      [
+        "Ġk",
+        "uning"
+      ],
+      [
+        "di",
+        "si"
+      ],
+      [
+        "Ġber",
+        "k"
+      ],
+      [
+        "ba",
+        "ga"
+      ],
+      [
+        "ung",
+        "isi"
+      ],
+      [
+        "ing",
+        "an"
+      ],
+      [
+        "as",
+        "e"
+      ],
+      [
+        "as",
+        "anya"
+      ],
+      [
+        "ĠA",
+        "pak"
+      ],
+      [
+        "Ġse",
+        "baga"
+      ],
+      [
+        "Ġmeng",
+        "endali"
+      ],
+      [
+        "Ġmeng",
+        "infeksi"
+      ],
+      [
+        "ur",
+        "unkan"
+      ],
+      [
+        "Ġa",
+        "bu"
+      ],
+      [
+        "Ġh",
+        "ija"
+      ],
+      [
+        "ĠP",
+        "erubahan"
+      ],
+      [
+        "gi",
+        "an"
+      ],
+      [
+        "Ġg",
+        "en"
+      ],
+      [
+        "Ġg",
+        "ela"
+      ],
+      [
+        "Ġmen",
+        "duk"
+      ],
+      [
+        "Ġmen",
+        "jadi"
+      ],
+      [
+        "Ġmen",
+        "urunkan"
+      ],
+      [
+        "Ġin",
+        "i"
+      ],
+      [
+        "lam",
+        "i"
+      ],
+      [
+        "Ġser",
+        "ta"
+      ],
+      [
+        "Ġf",
+        "aktor"
+      ],
+      [
+        "Ġf",
+        "ungisi"
+      ],
+      [
+        "Ġf",
+        "ase"
+      ],
+      [
+        "Ġw",
+        "ereng"
+      ],
+      [
+        "Ġbi",
+        "asanya"
+      ],
+      [
+        "ingk",
+        "at"
+      ],
+      [
+        "Ġr",
+        "entan"
+      ],
+      [
+        "Ġba",
+        "gian"
+      ],
+      [
+        "ĠPeng",
+        "endalian"
+      ],
+      [
+        "ĠD",
+        "aun"
+      ],
+      [
+        "Ġmemb",
+        "antu"
+      ],
+      [
+        "Ġo",
+        "pti"
+      ],
+      [
+        "atur",
+        "an"
+      ],
+      [
+        "Ġha",
+        "war"
+      ],
+      [
+        "Ġjar",
+        "ingan"
+      ],
+      [
+        "be",
+        "da"
+      ],
+      [
+        "Ġro",
+        "tasi"
+      ],
+      [
+        "Ġprak",
+        "tik"
+      ],
+      [
+        "Ġmet",
+        "ode"
+      ],
+      [
+        "Ġbes",
+        "ar"
+      ],
+      [
+        "Ġkon",
+        "disi"
+      ],
+      [
+        "ĠApak",
+        "ah"
+      ],
+      [
+        "Ġsebaga",
+        "i"
+      ],
+      [
+        "Ġmengendali",
+        "kan"
+      ],
+      [
+        "Ġhija",
+        "u"
+      ],
+      [
+        "Ġgela",
+        "p"
+      ],
+      [
+        "Ġmenduk",
+        "ung"
+      ],
+      [
+        "Ġfungisi",
+        "da"
+      ],
+      [
+        "Ġopti",
+        "mal"
+      ],
+      [
+        "%",
+        "."
+      ],
+      [
+        "5",
+        "0"
+      ],
+      [
+        "S",
+        "V"
+      ],
+      [
+        "T",
+        "SV"
+      ],
+      [
+        "X",
+        "ant"
+      ],
+      [
+        "a",
+        "c"
+      ],
+      [
+        "a",
+        "z"
+      ],
+      [
+        "b",
+        "en"
+      ],
+      [
+        "c",
+        "i"
+      ],
+      [
+        "d",
+        "em"
+      ],
+      [
+        "e",
+        "d"
+      ],
+      [
+        "g",
+        "ari"
+      ],
+      [
+        "g",
+        "et"
+      ],
+      [
+        "h",
+        "at"
+      ],
+      [
+        "h",
+        "as"
+      ],
+      [
+        "i",
+        "c"
+      ],
+      [
+        "i",
+        "bat"
+      ],
+      [
+        "i",
+        "ologi"
+      ],
+      [
+        "i",
+        "lik"
+      ],
+      [
+        "j",
+        "i"
+      ],
+      [
+        "j",
+        "uk"
+      ],
+      [
+        "k",
+        "o"
+      ],
+      [
+        "k",
+        "ah"
+      ],
+      [
+        "k",
+        "adang"
+      ],
+      [
+        "l",
+        "o"
+      ],
+      [
+        "l",
+        "ing"
+      ],
+      [
+        "m",
+        "e"
+      ],
+      [
+        "m",
+        "on"
+      ],
+      [
+        "n",
+        "o"
+      ],
+      [
+        "o",
+        "s"
+      ],
+      [
+        "o",
+        "bat"
+      ],
+      [
+        "o",
+        "tik"
+      ],
+      [
+        "p",
+        "or"
+      ],
+      [
+        "p",
+        "angan"
+      ],
+      [
+        "p",
+        "lik"
+      ],
+      [
+        "r",
+        "an"
+      ],
+      [
+        "s",
+        "ama"
+      ],
+      [
+        "s",
+        "ua"
+      ],
+      [
+        "t",
+        "ama"
+      ],
+      [
+        "u",
+        "m"
+      ],
+      [
+        "u",
+        "di"
+      ],
+      [
+        "u",
+        "al"
+      ],
+      [
+        "v",
+        "al"
+      ],
+      [
+        "w",
+        "a"
+      ],
+      [
+        "Â",
+        "°"
+      ],
+      [
+        "Ġ",
+        "2"
+      ],
+      [
+        "Ġ",
+        "u"
+      ],
+      [
+        "Ġ",
+        "an"
+      ],
+      [
+        "Ġ",
+        "ak"
+      ],
+      [
+        "Ġ",
+        "as"
+      ],
+      [
+        "Ġ",
+        "50"
+      ],
+      [
+        "Ġ",
+        "Xant"
+      ],
+      [
+        "an",
+        "i"
+      ],
+      [
+        "an",
+        "y"
+      ],
+      [
+        "Ġp",
+        "at"
+      ],
+      [
+        "er",
+        "atif"
+      ],
+      [
+        "er",
+        "os"
+      ],
+      [
+        "Ġt",
+        "ua"
+      ],
+      [
+        "Ġt",
+        "ul"
+      ],
+      [
+        "un",
+        "juk"
+      ],
+      [
+        "ak",
+        "u"
+      ],
+      [
+        "Ġb",
+        "u"
+      ],
+      [
+        "Ġb",
+        "uda"
+      ],
+      [
+        "ang",
+        "kah"
+      ],
+      [
+        "la",
+        "i"
+      ],
+      [
+        "ar",
+        "an"
+      ],
+      [
+        "ar",
+        "ti"
+      ],
+      [
+        "Ġs",
+        "is"
+      ],
+      [
+        "at",
+        "a"
+      ],
+      [
+        "am",
+        "pa"
+      ],
+      [
+        "am",
+        "pu"
+      ],
+      [
+        "am",
+        "bat"
+      ],
+      [
+        "Ġy",
+        "ait"
+      ],
+      [
+        "it",
+        "or"
+      ],
+      [
+        "Ġpa",
+        "ling"
+      ],
+      [
+        "Ġk",
+        "ek"
+      ],
+      [
+        "Ġk",
+        "et"
+      ],
+      [
+        "Ġk",
+        "ea"
+      ],
+      [
+        "Ġk",
+        "urang"
+      ],
+      [
+        "Ġk",
+        "arena"
+      ],
+      [
+        "Ġk",
+        "has"
+      ],
+      [
+        "Ġk",
+        "lo"
+      ],
+      [
+        "ro",
+        "sis"
+      ],
+      [
+        "di",
+        "l"
+      ],
+      [
+        "Ġber",
+        "kemb"
+      ],
+      [
+        "Ġber",
+        "beda"
+      ],
+      [
+        "Ġber",
+        "gari"
+      ],
+      [
+        "Ġber",
+        "sama"
+      ],
+      [
+        "as",
+        "uk"
+      ],
+      [
+        "Ġpeng",
+        "aruh"
+      ],
+      [
+        "Ġpeng",
+        "aturan"
+      ],
+      [
+        "Ġpeng",
+        "obat"
+      ],
+      [
+        "or",
+        "a"
+      ],
+      [
+        "Ġse",
+        "sua"
+      ],
+      [
+        "Ġter",
+        "s"
+      ],
+      [
+        "Ġter",
+        "utama"
+      ],
+      [
+        "Ġter",
+        "jadi"
+      ],
+      [
+        "Ġmeng",
+        "gunakan"
+      ],
+      [
+        "ga",
+        "h"
+      ],
+      [
+        "ur",
+        "angan"
+      ],
+      [
+        "Ġa",
+        "pa"
+      ],
+      [
+        "Ġa",
+        "ir"
+      ],
+      [
+        "Ġa",
+        "lami"
+      ],
+      [
+        "Ġa",
+        "plik"
+      ],
+      [
+        "Ġmem",
+        "ilik"
+      ],
+      [
+        "Ġh",
+        "ama"
+      ],
+      [
+        "Ġmeny",
+        "erang"
+      ],
+      [
+        "bu",
+        "an"
+      ],
+      [
+        "et",
+        "ani"
+      ],
+      [
+        "Ġmen",
+        "ce"
+      ],
+      [
+        "Ġmen",
+        "unjuk"
+      ],
+      [
+        "eb",
+        "ih"
+      ],
+      [
+        "Ġsp",
+        "ora"
+      ],
+      [
+        "on",
+        "az"
+      ],
+      [
+        "on",
+        "itor"
+      ],
+      [
+        "Ġl",
+        "uas"
+      ],
+      [
+        "Ġl",
+        "ebih"
+      ],
+      [
+        "ce",
+        "pat"
+      ],
+      [
+        "ir",
+        "i"
+      ],
+      [
+        "ĠR",
+        "TBV"
+      ],
+      [
+        "Ġsa",
+        "at"
+      ],
+      [
+        "ela",
+        "h"
+      ],
+      [
+        "isi",
+        "ko"
+      ],
+      [
+        "Ġc",
+        "ara"
+      ],
+      [
+        "Ġser",
+        "ing"
+      ],
+      [
+        "ahan",
+        "an"
+      ],
+      [
+        "is",
+        "me"
+      ],
+      [
+        "Ġe",
+        "pi"
+      ],
+      [
+        "Ġat",
+        "as"
+      ],
+      [
+        "uba",
+        "h"
+      ],
+      [
+        "Ġbi",
+        "ologi"
+      ],
+      [
+        "Ġbi",
+        "ji"
+      ],
+      [
+        "Ġr",
+        "isiko"
+      ],
+      [
+        "Ġla",
+        "pangan"
+      ],
+      [
+        "Ġor",
+        "gan"
+      ],
+      [
+        "Ġker",
+        "dil"
+      ],
+      [
+        "Ġba",
+        "ik"
+      ],
+      [
+        "ĠPeng",
+        "gunaan"
+      ],
+      [
+        "duk",
+        "si"
+      ],
+      [
+        "ho",
+        "mon"
+      ],
+      [
+        "Ġant",
+        "ar"
+      ],
+      [
+        "Ġant",
+        "ara"
+      ],
+      [
+        "Ġlain",
+        "nya"
+      ],
+      [
+        "ag",
+        "no"
+      ],
+      [
+        "Ġpen",
+        "ula"
+      ],
+      [
+        "Ġpro",
+        "duksi"
+      ],
+      [
+        "Ġke",
+        "para"
+      ],
+      [
+        "Ġkem",
+        "udi"
+      ],
+      [
+        "ĠT",
+        "ungro"
+      ],
+      [
+        "Ġma",
+        "lai"
+      ],
+      [
+        "Ġgen",
+        "eratif"
+      ],
+      [
+        "ben",
+        "tuk"
+      ],
+      [
+        "ci",
+        "l"
+      ],
+      [
+        "dem",
+        "iologi"
+      ],
+      [
+        "Ġak",
+        "ibat"
+      ],
+      [
+        "ĠXant",
+        "homon"
+      ],
+      [
+        "eros",
+        "ot"
+      ],
+      [
+        "Ġtul",
+        "ang"
+      ],
+      [
+        "Ġbuda",
+        "ya"
+      ],
+      [
+        "Ġsis",
+        "a"
+      ],
+      [
+        "Ġyait",
+        "u"
+      ],
+      [
+        "Ġkek",
+        "urangan"
+      ],
+      [
+        "Ġket",
+        "ahanan"
+      ],
+      [
+        "Ġkea",
+        "buan"
+      ],
+      [
+        "Ġklo",
+        "rosis"
+      ],
+      [
+        "Ġberkemb",
+        "ang"
+      ],
+      [
+        "Ġbergari",
+        "s"
+      ],
+      [
+        "Ġbersama",
+        "an"
+      ],
+      [
+        "Ġpengobat",
+        "an"
+      ],
+      [
+        "Ġsesua",
+        "i"
+      ],
+      [
+        "Ġaplik",
+        "asi"
+      ],
+      [
+        "Ġmemilik",
+        "i"
+      ],
+      [
+        "Ġmence",
+        "gah"
+      ],
+      [
+        "Ġmenunjuk",
+        "kan"
+      ],
+      [
+        "onaz",
+        "ole"
+      ],
+      [
+        "onitor",
+        "ing"
+      ],
+      [
+        "Ġepi",
+        "demiologi"
+      ],
+      [
+        "Ġbiologi",
+        "s"
+      ],
+      [
+        "agno",
+        "sis"
+      ],
+      [
+        "Ġpenula",
+        "ran"
+      ],
+      [
+        "Ġkepara",
+        "han"
+      ],
+      [
+        "Ġkemudi",
+        "an"
+      ],
+      [
+        "ĠXanthomon",
+        "as"
+      ],
+      [
+        ")",
+        "."
+      ],
+      [
+        "1",
+        "7"
+      ],
+      [
+        "2",
+        "8"
+      ],
+      [
+        "A",
+        "za"
+      ],
+      [
+        "H",
+        "el"
+      ],
+      [
+        "I",
+        "n"
+      ],
+      [
+        "R",
+        "TBV"
+      ],
+      [
+        "R",
+        "TSV"
+      ],
+      [
+        "W",
+        "ereng"
+      ],
+      [
+        "a",
+        "at"
+      ],
+      [
+        "a",
+        "pa"
+      ],
+      [
+        "a",
+        "ya"
+      ],
+      [
+        "a",
+        "pi"
+      ],
+      [
+        "a",
+        "lah"
+      ],
+      [
+        "a",
+        "pan"
+      ],
+      [
+        "a",
+        "lami"
+      ],
+      [
+        "a",
+        "wa"
+      ],
+      [
+        "b",
+        "i"
+      ],
+      [
+        "b",
+        "o"
+      ],
+      [
+        "b",
+        "ungan"
+      ],
+      [
+        "b",
+        "es"
+      ],
+      [
+        "c",
+        "a"
+      ],
+      [
+        "c",
+        "o"
+      ],
+      [
+        "c",
+        "en"
+      ],
+      [
+        "c",
+        "em"
+      ],
+      [
+        "c",
+        "et"
+      ],
+      [
+        "c",
+        "om"
+      ],
+      [
+        "c",
+        "iri"
+      ],
+      [
+        "c",
+        "onazole"
+      ],
+      [
+        "d",
+        "w"
+      ],
+      [
+        "d",
+        "er"
+      ],
+      [
+        "d",
+        "ara"
+      ],
+      [
+        "d",
+        "ua"
+      ],
+      [
+        "e",
+        "x"
+      ],
+      [
+        "e",
+        "si"
+      ],
+      [
+        "e",
+        "di"
+      ],
+      [
+        "e",
+        "pan"
+      ],
+      [
+        "e",
+        "ed"
+      ],
+      [
+        "e",
+        "get"
+      ],
+      [
+        "e",
+        "val"
+      ],
+      [
+        "f",
+        "or"
+      ],
+      [
+        "f",
+        "ur"
+      ],
+      [
+        "f",
+        "ik"
+      ],
+      [
+        "f",
+        "ologi"
+      ],
+      [
+        "g",
+        "r"
+      ],
+      [
+        "g",
+        "u"
+      ],
+      [
+        "h",
+        "e"
+      ],
+      [
+        "h",
+        "el"
+      ],
+      [
+        "h",
+        "eri"
+      ],
+      [
+        "h",
+        "is"
+      ],
+      [
+        "h",
+        "ingga"
+      ],
+      [
+        "h",
+        "ambat"
+      ],
+      [
+        "i",
+        "a"
+      ],
+      [
+        "i",
+        "di"
+      ],
+      [
+        "i",
+        "han"
+      ],
+      [
+        "i",
+        "st"
+      ],
+      [
+        "i",
+        "bu"
+      ],
+      [
+        "i",
+        "lam"
+      ],
+      [
+        "i",
+        "um"
+      ],
+      [
+        "j",
+        "ung"
+      ],
+      [
+        "j",
+        "ut"
+      ],
+      [
+        "j",
+        "angan"
+      ],
+      [
+        "j",
+        "on"
+      ],
+      [
+        "k",
+        "u"
+      ],
+      [
+        "k",
+        "in"
+      ],
+      [
+        "k",
+        "si"
+      ],
+      [
+        "k",
+        "on"
+      ],
+      [
+        "k",
+        "ait"
+      ],
+      [
+        "k",
+        "ip"
+      ],
+      [
+        "l",
+        "e"
+      ],
+      [
+        "l",
+        "an"
+      ],
+      [
+        "l",
+        "kan"
+      ],
+      [
+        "l",
+        "us"
+      ],
+      [
+        "l",
+        "anya"
+      ],
+      [
+        "l",
+        "aku"
+      ],
+      [
+        "l",
+        "angkah"
+      ],
+      [
+        "m",
+        "a"
+      ],
+      [
+        "m",
+        "in"
+      ],
+      [
+        "m",
+        "ula"
+      ],
+      [
+        "m",
+        "asuk"
+      ],
+      [
+        "n",
+        "i"
+      ],
+      [
+        "o",
+        "di"
+      ],
+      [
+        "o",
+        "us"
+      ],
+      [
+        "o",
+        "gen"
+      ],
+      [
+        "o",
+        "gr"
+      ],
+      [
+        "p",
+        "un"
+      ],
+      [
+        "p",
+        "ut"
+      ],
+      [
+        "p",
+        "el"
+      ],
+      [
+        "p",
+        "ot"
+      ],
+      [
+        "p",
+        "tasi"
+      ],
+      [
+        "r",
+        "is"
+      ],
+      [
+        "r",
+        "ac"
+      ],
+      [
+        "r",
+        "ic"
+      ],
+      [
+        "r",
+        "edi"
+      ],
+      [
+        "r",
+        "ibu"
+      ],
+      [
+        "s",
+        "ung"
+      ],
+      [
+        "s",
+        "asi"
+      ],
+      [
+        "s",
+        "es"
+      ],
+      [
+        "s",
+        "por"
+      ],
+      [
+        "s",
+        "ual"
+      ],
+      [
+        "t",
+        "en"
+      ],
+      [
+        "t",
+        "ar"
+      ],
+      [
+        "t",
+        "as"
+      ],
+      [
+        "t",
+        "al"
+      ],
+      [
+        "t",
+        "ho"
+      ],
+      [
+        "t",
+        "ensi"
+      ],
+      [
+        "t",
+        "elah"
+      ],
+      [
+        "t",
+        "he"
+      ],
+      [
+        "t",
+        "ous"
+      ],
+      [
+        "u",
+        "ti"
+      ],
+      [
+        "u",
+        "pa"
+      ],
+      [
+        "u",
+        "tu"
+      ],
+      [
+        "u",
+        "ga"
+      ],
+      [
+        "u",
+        "asi"
+      ],
+      [
+        "u",
+        "bungan"
+      ],
+      [
+        "v",
+        "it"
+      ],
+      [
+        "v",
+        "ari"
+      ],
+      [
+        "y",
+        "at"
+      ],
+      [
+        "y",
+        "cet"
+      ],
+      [
+        "z",
+        "eb"
+      ],
+      [
+        "Ġ",
+        "it"
+      ],
+      [
+        "Ġ",
+        "ek"
+      ],
+      [
+        "Ġ",
+        "ja"
+      ],
+      [
+        "Ġ",
+        "al"
+      ],
+      [
+        "Ġ",
+        "lam"
+      ],
+      [
+        "Ġ",
+        "uk"
+      ],
+      [
+        "Ġ",
+        "arti"
+      ],
+      [
+        "Ġ",
+        "cepat"
+      ],
+      [
+        "Ġ",
+        "17"
+      ],
+      [
+        "Ġ",
+        "Hel"
+      ],
+      [
+        "Ġ",
+        "In"
+      ],
+      [
+        "Ġ",
+        "Wereng"
+      ],
+      [
+        "an",
+        "da"
+      ],
+      [
+        "an",
+        "it"
+      ],
+      [
+        "an",
+        "nya"
+      ],
+      [
+        "an",
+        "co"
+      ],
+      [
+        "an",
+        "jut"
+      ],
+      [
+        "en",
+        "is"
+      ],
+      [
+        "en",
+        "ih"
+      ],
+      [
+        "en",
+        "tous"
+      ],
+      [
+        "Ġp",
+        "v"
+      ],
+      [
+        "Ġp",
+        "us"
+      ],
+      [
+        "Ġp",
+        "ola"
+      ],
+      [
+        "Ġp",
+        "etani"
+      ],
+      [
+        "Ġp",
+        "uti"
+      ],
+      [
+        "er",
+        "angan"
+      ],
+      [
+        "er",
+        "ah"
+      ],
+      [
+        "er",
+        "ap"
+      ],
+      [
+        "er",
+        "apan"
+      ],
+      [
+        "Ġd",
+        "ua"
+      ],
+      [
+        "Ġm",
+        "as"
+      ],
+      [
+        "Ġm",
+        "or"
+      ],
+      [
+        "Ġm",
+        "el"
+      ],
+      [
+        "Ġm",
+        "ik"
+      ],
+      [
+        "Ġm",
+        "ir"
+      ],
+      [
+        "Ġm",
+        "au"
+      ],
+      [
+        "Ġm",
+        "es"
+      ],
+      [
+        "Ġm",
+        "ampu"
+      ],
+      [
+        "Ġm",
+        "erosot"
+      ],
+      [
+        "Ġm",
+        "onitoring"
+      ],
+      [
+        "Ġm",
+        "odi"
+      ],
+      [
+        "Ġm",
+        "anco"
+      ],
+      [
+        "Ġt",
+        "am"
+      ],
+      [
+        "Ġt",
+        "et"
+      ],
+      [
+        "Ġt",
+        "ampak"
+      ],
+      [
+        "Ġt",
+        "ingkat"
+      ],
+      [
+        "Ġt",
+        "elah"
+      ],
+      [
+        "un",
+        "uh"
+      ],
+      [
+        "Ġb",
+        "el"
+      ],
+      [
+        "Ġb",
+        "any"
+      ],
+      [
+        "Ġb",
+        "enih"
+      ],
+      [
+        "ang",
+        "at"
+      ],
+      [
+        "ang",
+        "ga"
+      ],
+      [
+        "ang",
+        "gu"
+      ],
+      [
+        "ang",
+        "sung"
+      ],
+      [
+        "la",
+        "put"
+      ],
+      [
+        "ar",
+        "at"
+      ],
+      [
+        "ar",
+        "bo"
+      ],
+      [
+        "Ġs",
+        "em"
+      ],
+      [
+        "Ġs",
+        "ek"
+      ],
+      [
+        "Ġs",
+        "ik"
+      ],
+      [
+        "Ġs",
+        "teri"
+      ],
+      [
+        "Ġs",
+        "uk"
+      ],
+      [
+        "Ġs",
+        "if"
+      ],
+      [
+        "Ġs",
+        "ingkat"
+      ],
+      [
+        "Ġs",
+        "ampa"
+      ],
+      [
+        "Ġs",
+        "ist"
+      ],
+      [
+        "Ġs",
+        "tal"
+      ],
+      [
+        "Ġs",
+        "anit"
+      ],
+      [
+        "eng",
+        "apa"
+      ],
+      [
+        "at",
+        "u"
+      ],
+      [
+        "at",
+        "an"
+      ],
+      [
+        "am",
+        "atan"
+      ],
+      [
+        "Ġda",
+        "erah"
+      ],
+      [
+        "em",
+        "bab"
+      ],
+      [
+        "em",
+        "ik"
+      ],
+      [
+        "em",
+        "ampu"
+      ],
+      [
+        "em",
+        "pel"
+      ],
+      [
+        "it",
+        "ar"
+      ],
+      [
+        "it",
+        "ro"
+      ],
+      [
+        "li",
+        "r"
+      ],
+      [
+        "li",
+        "hat"
+      ],
+      [
+        "li",
+        "for"
+      ],
+      [
+        "li",
+        "sasi"
+      ],
+      [
+        "Ġk",
+        "im"
+      ],
+      [
+        "Ġk",
+        "adang"
+      ],
+      [
+        "Ġk",
+        "ata"
+      ],
+      [
+        "Ġk",
+        "utu"
+      ],
+      [
+        "Ġk",
+        "arat"
+      ],
+      [
+        "ro",
+        "or"
+      ],
+      [
+        "di",
+        "agnosis"
+      ],
+      [
+        "di",
+        "ca"
+      ],
+      [
+        "di",
+        "rac"
+      ],
+      [
+        "ti",
+        "vit"
+      ],
+      [
+        "Ġber",
+        "aturan"
+      ],
+      [
+        "Ġber",
+        "arti"
+      ],
+      [
+        "Ġber",
+        "ubah"
+      ],
+      [
+        "Ġber",
+        "bentuk"
+      ],
+      [
+        "Ġber",
+        "pot"
+      ],
+      [
+        "Ġber",
+        "upa"
+      ],
+      [
+        "Ġber",
+        "vari"
+      ],
+      [
+        "ba",
+        "wa"
+      ],
+      [
+        "ek",
+        "om"
+      ],
+      [
+        "ek",
+        "sual"
+      ],
+      [
+        "ung",
+        "kin"
+      ],
+      [
+        "Ġpeng",
+        "isi"
+      ],
+      [
+        "Ġpeng",
+        "his"
+      ],
+      [
+        "Ġpeng",
+        "amatan"
+      ],
+      [
+        "Ġtan",
+        "ah"
+      ],
+      [
+        "or",
+        "any"
+      ],
+      [
+        "ĠB",
+        "ip"
+      ],
+      [
+        "Ġse",
+        "dang"
+      ],
+      [
+        "Ġse",
+        "hat"
+      ],
+      [
+        "Ġse",
+        "hingga"
+      ],
+      [
+        "Ġse",
+        "telah"
+      ],
+      [
+        "Ġse",
+        "laput"
+      ],
+      [
+        "Ġper",
+        "an"
+      ],
+      [
+        "Ġper",
+        "beda"
+      ],
+      [
+        "Ġper",
+        "tama"
+      ],
+      [
+        "Ġter",
+        "kadang"
+      ],
+      [
+        "Ġter",
+        "bentuk"
+      ],
+      [
+        "Ġter",
+        "kait"
+      ],
+      [
+        "Ġter",
+        "masuk"
+      ],
+      [
+        "Ġter",
+        "ten"
+      ],
+      [
+        "Ġter",
+        "lihat"
+      ],
+      [
+        "Ġter",
+        "bawa"
+      ],
+      [
+        "st",
+        "rak"
+      ],
+      [
+        "st",
+        "ensi"
+      ],
+      [
+        "st",
+        "ribu"
+      ],
+      [
+        "Ġmeng",
+        "elola"
+      ],
+      [
+        "Ġmeng",
+        "uning"
+      ],
+      [
+        "Ġmeng",
+        "atur"
+      ],
+      [
+        "Ġmeng",
+        "aku"
+      ],
+      [
+        "Ġmeng",
+        "ubah"
+      ],
+      [
+        "Ġmeng",
+        "alami"
+      ],
+      [
+        "Ġmeng",
+        "hambat"
+      ],
+      [
+        "ur",
+        "an"
+      ],
+      [
+        "Ġa",
+        "gen"
+      ],
+      [
+        "Ġa",
+        "bi"
+      ],
+      [
+        "Ġmem",
+        "bu"
+      ],
+      [
+        "Ġmem",
+        "asuk"
+      ],
+      [
+        "Ġh",
+        "ari"
+      ],
+      [
+        "Ġh",
+        "ampa"
+      ],
+      [
+        "Ġh",
+        "ex"
+      ],
+      [
+        "Ġh",
+        "ubungan"
+      ],
+      [
+        "Ġh",
+        "angat"
+      ],
+      [
+        "Ġdi",
+        "agnosis"
+      ],
+      [
+        "Ġdi",
+        "awa"
+      ],
+      [
+        "Ġdi",
+        "eval"
+      ],
+      [
+        "Ġdi",
+        "laku"
+      ],
+      [
+        "Ġdi",
+        "mula"
+      ],
+      [
+        "Ġdi",
+        "stribu"
+      ],
+      [
+        "el",
+        "anjut"
+      ],
+      [
+        "Ġv",
+        "is"
+      ],
+      [
+        "Ġv",
+        "eget"
+      ],
+      [
+        "Ġmeny",
+        "atu"
+      ],
+      [
+        "ĠBa",
+        "han"
+      ],
+      [
+        "ĠP",
+        "ada"
+      ],
+      [
+        "ĠP",
+        "etani"
+      ],
+      [
+        "bu",
+        "lkan"
+      ],
+      [
+        "ik",
+        "el"
+      ],
+      [
+        "Ġg",
+        "anda"
+      ],
+      [
+        "Ġg",
+        "anggu"
+      ],
+      [
+        "enda",
+        "h"
+      ],
+      [
+        "enda",
+        "si"
+      ],
+      [
+        "Ġmen",
+        "im"
+      ],
+      [
+        "Ġmen",
+        "ingkat"
+      ],
+      [
+        "Ġmen",
+        "erap"
+      ],
+      [
+        "Ġmen",
+        "empel"
+      ],
+      [
+        "Ġmen",
+        "diagnosis"
+      ],
+      [
+        "eb",
+        "ut"
+      ],
+      [
+        "eb",
+        "ihan"
+      ],
+      [
+        "eja",
+        "lanya"
+      ],
+      [
+        "Ġin",
+        "tensi"
+      ],
+      [
+        "Ġin",
+        "dica"
+      ],
+      [
+        "Ġsp",
+        "p"
+      ],
+      [
+        "Ġsp",
+        "heri"
+      ],
+      [
+        "im",
+        "ba"
+      ],
+      [
+        "on",
+        "is"
+      ],
+      [
+        "on",
+        "jon"
+      ],
+      [
+        "on",
+        "ogr"
+      ],
+      [
+        "Ġl",
+        "angkah"
+      ],
+      [
+        "Ġl",
+        "angsung"
+      ],
+      [
+        "Ġl",
+        "embab"
+      ],
+      [
+        "Ġl",
+        "onjon"
+      ],
+      [
+        "war",
+        "ni"
+      ],
+      [
+        "ĠR",
+        "TSV"
+      ],
+      [
+        "Ġsa",
+        "lah"
+      ],
+      [
+        "isi",
+        "si"
+      ],
+      [
+        "Ġc",
+        "iri"
+      ],
+      [
+        "Ġj",
+        "uga"
+      ],
+      [
+        "Ġj",
+        "enis"
+      ],
+      [
+        "Ġser",
+        "angga"
+      ],
+      [
+        "is",
+        "ar"
+      ],
+      [
+        "na",
+        "por"
+      ],
+      [
+        "Ġf",
+        "ilam"
+      ],
+      [
+        "Ġada",
+        "ptasi"
+      ],
+      [
+        "ht",
+        "a"
+      ],
+      [
+        "pi",
+        "conazole"
+      ],
+      [
+        "pi",
+        "lan"
+      ],
+      [
+        "ĠS",
+        "uhu"
+      ],
+      [
+        "ĠS",
+        "trategi"
+      ],
+      [
+        "ĠS",
+        "aat"
+      ],
+      [
+        "ĠS",
+        "erangan"
+      ],
+      [
+        "Ġbi",
+        "otik"
+      ],
+      [
+        "Ġbi",
+        "aya"
+      ],
+      [
+        "Ġmemp",
+        "redi"
+      ],
+      [
+        "ola",
+        "ris"
+      ],
+      [
+        "Ġr",
+        "esi"
+      ],
+      [
+        "Ġr",
+        "ekom"
+      ],
+      [
+        "Ġr",
+        "endah"
+      ],
+      [
+        "Ġla",
+        "han"
+      ],
+      [
+        "tif",
+        "eed"
+      ],
+      [
+        "ĠPeny",
+        "ebab"
+      ],
+      [
+        "Ġefek",
+        "tivit"
+      ],
+      [
+        "lu",
+        "as"
+      ],
+      [
+        "ĠG",
+        "ejalanya"
+      ],
+      [
+        "Ġn",
+        "on"
+      ],
+      [
+        "Ġn",
+        "itro"
+      ],
+      [
+        "Ġn",
+        "imba"
+      ],
+      [
+        "Ġkel",
+        "ebihan"
+      ],
+      [
+        "Ġterh",
+        "ambat"
+      ],
+      [
+        "Ġmenyebar",
+        "kan"
+      ],
+      [
+        "Ġpan",
+        "ic"
+      ],
+      [
+        "Ġpan",
+        "ikel"
+      ],
+      [
+        "Ġba",
+        "cil"
+      ],
+      [
+        "ĠPeng",
+        "elolaan"
+      ],
+      [
+        "Ġkelem",
+        "ahan"
+      ],
+      [
+        "ho",
+        "gen"
+      ],
+      [
+        "ho",
+        "der"
+      ],
+      [
+        "ĠD",
+        "imana"
+      ],
+      [
+        "ĠD",
+        "ampak"
+      ],
+      [
+        "ĠM",
+        "elalui"
+      ],
+      [
+        "ĠM",
+        "ag"
+      ],
+      [
+        "ĠM",
+        "onitoring"
+      ],
+      [
+        "ĠM",
+        "engapa"
+      ],
+      [
+        "ĠM",
+        "onogr"
+      ],
+      [
+        "Ġant",
+        "ag"
+      ],
+      [
+        "Ġmemb",
+        "ed"
+      ],
+      [
+        "Ġmemb",
+        "unuh"
+      ],
+      [
+        "Ġmemper",
+        "oleh"
+      ],
+      [
+        "Ġmemper",
+        "para"
+      ],
+      [
+        "Ġmemper",
+        "cepat"
+      ],
+      [
+        "Ġmemper",
+        "ku"
+      ],
+      [
+        "Ġmemper",
+        "luas"
+      ],
+      [
+        "Ġdis",
+        "aran"
+      ],
+      [
+        "ĠK",
+        "arena"
+      ],
+      [
+        "ĠK",
+        "ata"
+      ],
+      [
+        "ĠK",
+        "arbo"
+      ],
+      [
+        "ĠK",
+        "emampu"
+      ],
+      [
+        "Ġo",
+        "val"
+      ],
+      [
+        "Ġpen",
+        "cem"
+      ],
+      [
+        "Ġpen",
+        "erapan"
+      ],
+      [
+        "Ġpro",
+        "ses"
+      ],
+      [
+        "Ġpro",
+        "piconazole"
+      ],
+      [
+        "Ġke",
+        "cil"
+      ],
+      [
+        "Ġke",
+        "dua"
+      ],
+      [
+        "Ġkem",
+        "erosot"
+      ],
+      [
+        "Ġkem",
+        "ungkin"
+      ],
+      [
+        "Ġha",
+        "yat"
+      ],
+      [
+        "Ġjar",
+        "ak"
+      ],
+      [
+        "ap",
+        "hel"
+      ],
+      [
+        "gan",
+        "isme"
+      ],
+      [
+        "om",
+        "ik"
+      ],
+      [
+        "ĠT",
+        "ric"
+      ],
+      [
+        "Ġma",
+        "lam"
+      ],
+      [
+        "Ġberk",
+        "epan"
+      ],
+      [
+        "Ġberk",
+        "elanjut"
+      ],
+      [
+        "Ġberk",
+        "isar"
+      ],
+      [
+        "Ġgen",
+        "omik"
+      ],
+      [
+        "ac",
+        "onazole"
+      ],
+      [
+        "Ġ2",
+        "0"
+      ],
+      [
+        "Ġ2",
+        "3"
+      ],
+      [
+        "Ġu",
+        "dara"
+      ],
+      [
+        "Ġu",
+        "jung"
+      ],
+      [
+        "Ġan",
+        "akan"
+      ],
+      [
+        "Ġan",
+        "tifeed"
+      ],
+      [
+        "Ġas",
+        "com"
+      ],
+      [
+        "Ġas",
+        "eksual"
+      ],
+      [
+        "Ġpat",
+        "ogen"
+      ],
+      [
+        "Ġpat",
+        "hogen"
+      ],
+      [
+        "Ġbu",
+        "ah"
+      ],
+      [
+        "Ġbu",
+        "lir"
+      ],
+      [
+        "Ġters",
+        "erang"
+      ],
+      [
+        "Ġters",
+        "ebut"
+      ],
+      [
+        "Ġorgan",
+        "ik"
+      ],
+      [
+        "Ġorgan",
+        "isme"
+      ],
+      [
+        "Aza",
+        "dirac"
+      ],
+      [
+        "bes",
+        "cen"
+      ],
+      [
+        "dw",
+        "al"
+      ],
+      [
+        "fur",
+        "am"
+      ],
+      [
+        "fik",
+        "asi"
+      ],
+      [
+        "idi",
+        "a"
+      ],
+      [
+        "kon",
+        "idia"
+      ],
+      [
+        "kip",
+        "un"
+      ],
+      [
+        "min",
+        "tho"
+      ],
+      [
+        "spor",
+        "ium"
+      ],
+      [
+        "tar",
+        "get"
+      ],
+      [
+        "ycet",
+        "e"
+      ],
+      [
+        "Ġit",
+        "u"
+      ],
+      [
+        "Ġek",
+        "strak"
+      ],
+      [
+        "Ġja",
+        "dwal"
+      ],
+      [
+        "Ġal",
+        "bescen"
+      ],
+      [
+        "Ġlam",
+        "a"
+      ],
+      [
+        "Ġuk",
+        "uran"
+      ],
+      [
+        "ĠHel",
+        "mintho"
+      ],
+      [
+        "ĠIn",
+        "feksi"
+      ],
+      [
+        "Ġpus",
+        "at"
+      ],
+      [
+        "Ġputi",
+        "h"
+      ],
+      [
+        "Ġmas",
+        "alah"
+      ],
+      [
+        "Ġmor",
+        "fologi"
+      ],
+      [
+        "Ġmel",
+        "uas"
+      ],
+      [
+        "Ġmik",
+        "roor"
+      ],
+      [
+        "Ġmir",
+        "ip"
+      ],
+      [
+        "Ġmau",
+        "pun"
+      ],
+      [
+        "Ġmes",
+        "kipun"
+      ],
+      [
+        "Ġmodi",
+        "fikasi"
+      ],
+      [
+        "Ġmanco",
+        "zeb"
+      ],
+      [
+        "Ġtam",
+        "pilan"
+      ],
+      [
+        "Ġtet",
+        "api"
+      ],
+      [
+        "Ġbel",
+        "um"
+      ],
+      [
+        "Ġbany",
+        "ak"
+      ],
+      [
+        "Ġsem",
+        "ua"
+      ],
+      [
+        "Ġsek",
+        "itar"
+      ],
+      [
+        "Ġsik",
+        "lus"
+      ],
+      [
+        "Ġsteri",
+        "lisasi"
+      ],
+      [
+        "Ġsuk",
+        "un"
+      ],
+      [
+        "Ġsif",
+        "at"
+      ],
+      [
+        "Ġsampa",
+        "i"
+      ],
+      [
+        "Ġsist",
+        "emik"
+      ],
+      [
+        "Ġstal",
+        "k"
+      ],
+      [
+        "Ġsanit",
+        "asi"
+      ],
+      [
+        "lifor",
+        "m"
+      ],
+      [
+        "Ġkim",
+        "ia"
+      ],
+      [
+        "Ġberpot",
+        "ensi"
+      ],
+      [
+        "Ġbervari",
+        "asi"
+      ],
+      [
+        "Ġpengisi",
+        "an"
+      ],
+      [
+        "Ġpenghis",
+        "ap"
+      ],
+      [
+        "orany",
+        "e"
+      ],
+      [
+        "ĠBip",
+        "olaris"
+      ],
+      [
+        "Ġsedang",
+        "kan"
+      ],
+      [
+        "Ġperbeda",
+        "an"
+      ],
+      [
+        "Ġterbentuk",
+        "nya"
+      ],
+      [
+        "Ġterten",
+        "tu"
+      ],
+      [
+        "Ġmengaku",
+        "isisi"
+      ],
+      [
+        "Ġabi",
+        "otik"
+      ],
+      [
+        "Ġmembu",
+        "at"
+      ],
+      [
+        "Ġmemasuk",
+        "i"
+      ],
+      [
+        "Ġhex",
+        "aconazole"
+      ],
+      [
+        "Ġdiawa",
+        "li"
+      ],
+      [
+        "Ġdieval",
+        "uasi"
+      ],
+      [
+        "Ġdilaku",
+        "kan"
+      ],
+      [
+        "Ġdimula",
+        "i"
+      ],
+      [
+        "Ġdistribu",
+        "si"
+      ],
+      [
+        "Ġvis",
+        "ual"
+      ],
+      [
+        "Ġveget",
+        "atif"
+      ],
+      [
+        "Ġganggu",
+        "an"
+      ],
+      [
+        "Ġmenim",
+        "bulkan"
+      ],
+      [
+        "Ġmeningkat",
+        "kan"
+      ],
+      [
+        "Ġmenerap",
+        "kan"
+      ],
+      [
+        "Ġintensi",
+        "tas"
+      ],
+      [
+        "Ġspheri",
+        "cal"
+      ],
+      [
+        "Ġlonjon",
+        "g"
+      ],
+      [
+        "napor",
+        "the"
+      ],
+      [
+        "Ġfilam",
+        "entous"
+      ],
+      [
+        "Ġmempredi",
+        "ksi"
+      ],
+      [
+        "Ġresi",
+        "stensi"
+      ],
+      [
+        "Ġrekom",
+        "endasi"
+      ],
+      [
+        "Ġefektivit",
+        "as"
+      ],
+      [
+        "Ġnitro",
+        "gen"
+      ],
+      [
+        "Ġpanic",
+        "le"
+      ],
+      [
+        "Ġbacil",
+        "liform"
+      ],
+      [
+        "hoder",
+        "ma"
+      ],
+      [
+        "ĠMag",
+        "naporthe"
+      ],
+      [
+        "ĠMonogr",
+        "aphel"
+      ],
+      [
+        "Ġantag",
+        "onis"
+      ],
+      [
+        "Ġmembed",
+        "akan"
+      ],
+      [
+        "Ġmemperpara",
+        "h"
+      ],
+      [
+        "Ġmemperku",
+        "at"
+      ],
+      [
+        "Ġdisaran",
+        "kan"
+      ],
+      [
+        "ĠKarbo",
+        "furam"
+      ],
+      [
+        "ĠKemampu",
+        "annya"
+      ],
+      [
+        "Ġpencem",
+        "aran"
+      ],
+      [
+        "Ġkemerosot",
+        "an"
+      ],
+      [
+        "Ġkemungkin",
+        "an"
+      ],
+      [
+        "Ġhayat",
+        "i"
+      ],
+      [
+        "ĠTric",
+        "hoderma"
+      ],
+      [
+        "Ġberkepan",
+        "jangan"
+      ],
+      [
+        "Ġberkelanjut",
+        "an"
+      ],
+      [
+        "Ġantifeed",
+        "ant"
+      ],
+      [
+        "Ġascom",
+        "ycete"
+      ],
+      [
+        "Azadirac",
+        "hta"
+      ],
+      [
+        "Ġalbescen",
+        "s"
+      ],
+      [
+        "ĠHelmintho",
+        "sporium"
+      ],
+      [
+        "Ġmikroor",
+        "ganisme"
+      ],
+      [
+        "ĠMonographel",
+        "la"
+      ]
+    ]
+  }
+}
