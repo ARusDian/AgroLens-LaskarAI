@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -28,9 +29,11 @@ export default function Home() {
             <p className="text-gray-300 leading-relaxed">
               Solusi cerdas untuk mendeteksi penyakit tanaman padi dengan teknologi AI. Dapatkan diagnosis cepat dan akurat untuk menjaga kesehatan tanaman Anda dan meningkatkan hasil panen.
             </p>
-            <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300">
-              Classify Now
-            </button>
+            <Link href="/diagnosa">
+              <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300">
+                Diagnosa Sekarang
+              </button>
+            </Link>
           </div>
 
           {/* Right Column - Image Grid */}
