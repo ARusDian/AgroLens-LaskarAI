@@ -1,29 +1,151 @@
 'use client';
 
-import { useState, useRef, useCallback, ChangeEvent } from 'react';
+import { useState, useEffect, useRef, useCallback, ChangeEvent } from 'react';
 import Image from "next/image";
 import Link from "next/link";
+
+type Message = {
+  id: string;
+  text: string;
+  sender: 'user' | 'bot';
+  timestamp: Date;
+};
 
 type DiseasePrediction = {
   prediction: string;
   description: string;
 };
 
-const DISEASE_DESCRIPTIONS = {
-  "BacterialBlight": "Penyakit akibat bakteri yang menyebabkan bercak air dan layu.",
-  "Blast": "Penyakit jamur yang menyerang leher malai dan daun.",
-  "Brownspot": "Terdapat bercak coklat bulat di permukaan daun.",
-  "Healthy": "Tanaman padi dalam kondisi sehat tanpa gejala penyakit.",
-  "Leaf_Scald": "Daun mengering dari ujung dan terbakar karena patogen atau cuaca ekstrem.",
-  "Tungro": "Penyakit virus yang membuat daun menguning dan pertumbuhan terhambat.",
-};
+
 
 export default function DiagnosaPage() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<DiseasePrediction | null>(null);
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [inputMessage, setInputMessage] = useState('');
+  const [isChatLoading, setIsChatLoading] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const chatEndRef = useRef<HTMLDivElement>(null);
+
+  // Auto-scroll chat to bottom when messages change
+  useEffect(() => {
+    chatEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages]);
+
+  const sendMessage = async () => {
+    if (!inputMessage.trim() || !result) return;
+
+    const userMessage: Message = {
+      id: Date.now().toString(),
+      text: inputMessage,
+      sender: 'user',
+      timestamp: new Date(),
+    };
+
+    setMessages(prev => [...prev, userMessage]);
+    setInputMessage('');
+    setIsChatLoading(true);
+
+    try {
+      // Include the disease information in the prompt for context
+      const prompt = `Penyakit: ${result.prediction}. ${inputMessage}`;
+      
+      const response = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ prompt }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Gagal mendapatkan respons dari chatbot');
+      }
+
+      const data = await response.json();
+      
+      const botMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        text: data.response || 'Maaf, saya tidak dapat memproses permintaan Anda saat ini.',
+        sender: 'bot',
+        timestamp: new Date(),
+      };
+
+      setMessages(prev => [...prev, botMessage]);
+    } catch (error) {
+      console.error('Error sending message:', error);
+      const errorMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        text: 'Maaf, terjadi kesalahan saat memproses pesan Anda.',
+        sender: 'bot',
+        timestamp: new Date(),
+      };
+      setMessages(prev => [...prev, errorMessage]);
+    } finally {
+      setIsChatLoading(false);
+    }
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      sendMessage();
+    }
+  };
+
+  const handleExampleClick = async (exampleNumber: number) => {
+    // Clear previous state
+    setSelectedImage(null);
+    setResult(null);
+    setMessages([]);
+    
+    // Simulate file selection for example images
+    try {
+      const response = await fetch(`/example_${exampleNumber}.jpg`);
+      const blob = await response.blob();
+      const file = new File([blob], `example_${exampleNumber}.jpg`, { type: 'image/jpeg' });
+      
+      // Trigger file change handler
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        setSelectedImage(e.target?.result as string);
+      };
+      reader.readAsDataURL(file);
+
+      // Simulate API call for classification
+      setIsLoading(true);
+      
+      // Mock API response after a delay
+      setTimeout(() => {
+        const mockResponses = [
+          { prediction: 'BacterialBlight', description: 'Penyakit akibat bakteri yang menyebabkan bercak air dan layu.' },
+          { prediction: 'Blast', description: 'Penyakit jamur yang menyerang leher malai dan daun.' },
+          { prediction: 'Brownspot', description: 'Terdapat bercak coklat bulat di permukaan daun.' },
+        ];
+        
+        const mockResult = mockResponses[exampleNumber - 1] || 
+          { prediction: 'Healthy', description: 'Tanaman padi dalam kondisi sehat tanpa gejala penyakit.' };
+        
+        setResult(mockResult);
+        setIsLoading(false);
+        
+        // Add welcome message from bot
+        const welcomeMessage: Message = {
+          id: Date.now().toString(),
+          text: `Saya mendeteksi penyakit ${mockResult.prediction}. ${mockResult.description} Apakah Anda ingin mengetahui lebih lanjut tentang cara mengatasi penyakit ini?`,
+          sender: 'bot',
+          timestamp: new Date(),
+        };
+        setMessages([welcomeMessage]);
+      }, 1500);
+      
+    } catch (error) {
+      console.error('Error loading example image:', error);
+      setIsLoading(false);
+    }
+  };
 
   const handleFileChange = useCallback(async (file: File) => {
     if (!file) return;
@@ -65,10 +187,22 @@ export default function DiagnosaPage() {
       }
 
       const data = await response.json();
+      const prediction = data.prediction;
+      const description = data.description;
+      
       setResult({
-        prediction: data.prediction,
-        description: DISEASE_DESCRIPTIONS[data.prediction as keyof typeof DISEASE_DESCRIPTIONS] || data.description
+        prediction,
+        description
       });
+      
+      // Add welcome message from bot
+      const welcomeMessage: Message = {
+        id: Date.now().toString(),
+        text: `Saya mendeteksi penyakit ${prediction}. ${description} Apakah Anda ingin mengetahui lebih lanjut tentang cara mengatasi penyakit ini?`,
+        sender: 'bot',
+        timestamp: new Date(),
+      };
+      setMessages([welcomeMessage]);
     } catch (error) {
       console.error('Error:', error);
       alert('Terjadi kesalahan saat memproses gambar');
@@ -107,14 +241,13 @@ export default function DiagnosaPage() {
     }
   };
 
-  const handleExampleClick = (exampleNumber: number) => {
-    // Simulate file selection for example images
-    fetch(`/example_${exampleNumber}.jpg`)
-      .then(res => res.blob())
-      .then(blob => {
-        const file = new File([blob], `example_${exampleNumber}.jpg`, { type: 'image/jpeg' });
-        handleFileChange(file);
-      });
+
+  // Handle form submission for chat
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (inputMessage.trim() && !isChatLoading) {
+      sendMessage();
+    }
   };
 
   return (
@@ -125,7 +258,6 @@ export default function DiagnosaPage() {
         </Link>
       </header>
       <div className="max-w-4xl mx-auto">
-
         <h1 className="text-3xl font-bold mb-8 text-center">Upload Gambar untuk Diagnosa</h1>
         
         <div className="bg-gray-800 rounded-xl p-6 mb-8">
@@ -170,6 +302,34 @@ export default function DiagnosaPage() {
             </div>
           </div>
 
+        {/* Example Images */}
+          <div className="bg-gray-800 rounded-xl p-6">
+            <h2 className="text-xl font-semibold mb-4">Contoh Gambar</h2>
+            <p className="text-gray-400 mb-4">Klik pada gambar di bawah untuk mencoba dengan contoh:</p>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {[1, 2, 3].map((item) => (
+                <div 
+                  key={item} 
+                  className="cursor-pointer hover:opacity-90 transition-opacity group"
+                  onClick={() => handleExampleClick(item)}
+                >
+                  <div className="relative aspect-[4/3] bg-gray-700 rounded-lg overflow-hidden">
+                    <Image 
+                      src={`/example_${item}.jpg`}
+                      alt={`Contoh ${item}`}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+
+        </div>
+
           {/* Preview and Result Section */}
           {(selectedImage || isLoading || result) && (
             <div className="mt-8 bg-gray-700 p-6 rounded-lg">
@@ -212,6 +372,7 @@ export default function DiagnosaPage() {
                         onClick={() => {
                           setSelectedImage(null);
                           setResult(null);
+                          setMessages([]);
                         }}
                       >
                         Coba Lagi
@@ -219,35 +380,80 @@ export default function DiagnosaPage() {
                     </div>
                   ) : null}
                 </div>
+                
               </div>
             </div>
           )}
-        </div>
 
-        {/* Example Images */}
-        <div className="bg-gray-800 rounded-xl p-6">
-          <h2 className="text-xl font-semibold mb-4">Contoh Gambar</h2>
-          <p className="text-gray-400 mb-4">Klik pada gambar di bawah untuk mencoba dengan contoh:</p>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {[1, 2, 3].map((item) => (
-              <div 
-                key={item} 
-                className="cursor-pointer hover:opacity-90 transition-opacity group"
-                onClick={() => handleExampleClick(item)}
-              >
-                <div className="relative aspect-[4/3] bg-gray-700 rounded-lg overflow-hidden">
-                  <Image 
-                    src={`/example_${item}.jpg`}
-                    alt={`Contoh ${item}`}
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
+          {result && (
+            <div className="mt-8 border-t border-gray-600 pt-6">
+              {/* Chat Interface */}
+              <h3 className="text-lg font-semibold mb-4">Tanya tentang penyakit ini</h3>
+
+              {/* Messages */}
+              <div className="mb-4 h-64 overflow-y-auto p-3 bg-gray-800 rounded-lg">
+                    {messages.length > 0 ? (
+                      <div className="space-y-3">
+                        {messages.map((message) => (
+                          <div 
+                            key={message.id}
+                            className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
+                          >
+                            <div 
+                              className={`max-w-[80%] rounded-lg p-3 ${
+                                message.sender === 'user' 
+                                  ? 'bg-green-600 text-white' 
+                                  : 'bg-gray-700 text-gray-200'
+                              }`}
+                            >
+                              <p className="whitespace-pre-wrap">{message.text}</p>
+                              <p className="text-xs opacity-70 mt-1 text-right">
+                                {new Date(message.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                              </p>
+                            </div>
+                          </div>
+                        ))}
+                        <div ref={chatEndRef} />
+                      </div>
+                    ) : (
+                      <div className="text-center text-gray-400 h-full flex items-center justify-center">
+                        <p>Tanyakan tentang penyakit ini atau cara penanganannya</p>
+                      </div>
+                    )}
               </div>
-            ))}
-          </div>
-        </div>
+
+              {/* Input */}
+              <form onSubmit={handleSubmit} className="flex gap-2">
+                <input
+                  type="text"
+                  value={inputMessage}
+                  onChange={(e) => setInputMessage(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                  placeholder="Ketik pertanyaan Anda..."
+                  className="flex-1 bg-gray-700 text-white rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+                  disabled={isChatLoading}
+                />
+                <button
+                  type="submit"
+                  disabled={!inputMessage.trim() || isChatLoading}
+                  className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed flex items-center"
+                >
+                  {isChatLoading ? (
+                    <>
+                      <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                        <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                        <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                      </svg>
+                      Mengirim...
+                    </>
+                  ) : (
+                    'Kirim'
+                  )}
+                </button>
+              </form>
+              </div>
+          )}
+
       </div>
     </div>
   );
