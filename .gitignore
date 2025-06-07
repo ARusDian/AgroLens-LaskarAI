@@ -9,3 +9,5 @@ ImageClassification/saved_model/
 __pycache__/
 **/__pycache__/
 NLP/models/external/finetuned-agrolens
+NLP/models/external/indogpt-chatbot-finetuned
+NLP/models/external/indogpt-chatbot
