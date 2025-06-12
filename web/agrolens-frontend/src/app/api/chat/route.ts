@@ -5,7 +5,7 @@ export const runtime = 'nodejs';
 export async function POST(request: Request) {
   try {
     const { prompt } = await request.json();
-    
+
     if (!prompt) {
       return NextResponse.json(
         { error: 'No prompt provided' },
@@ -13,7 +13,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const response = await fetch('http://localhost:8000/chatbot', {
+    const response = await fetch('http://172.28.42.56:8000/chatbot', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -26,7 +26,14 @@ export async function POST(request: Request) {
     }
 
     const result = await response.json();
-    return NextResponse.json(result);
+
+    // Ambil hanya bagian setelah "Jawaban:"
+    const rawAnswer = result.answer || ''; // asumsi backend mengembalikan { answer: "..." }
+    const filteredAnswer = rawAnswer.includes('Jawaban:')
+      ? rawAnswer.split('Jawaban:')[1].trim()
+      : rawAnswer;
+
+    return NextResponse.json({ answer: filteredAnswer });
   } catch (error) {
     console.error('Error in chat API:', error);
     return NextResponse.json(

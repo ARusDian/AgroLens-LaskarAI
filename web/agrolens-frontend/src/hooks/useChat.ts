@@ -13,6 +13,10 @@ export const useChat = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  function capitalizeSentences(text: string): string {
+    return text.replace(/(^\s*\w|[\.\!\?]\s*\w)/g, (c) => c.toUpperCase());
+  }  
+
   const addMessage = useCallback((text: string, sender: 'user' | 'bot') => {
     const newMessage: Message = {
       id: Date.now().toString(),
@@ -26,8 +30,10 @@ export const useChat = () => {
   const sendMessage = useCallback(async (text: string, diseaseInfo?: string) => {
     if (!text.trim()) return;
 
-    const prompt = diseaseInfo ? `Penyakit: ${diseaseInfo}. ${text}` : text;
-    
+    const prompt = diseaseInfo
+      ? `<instruction>Penyakit: ${diseaseInfo}\nPertanyaan: ${text}\nJawaban:`
+      : `<instruction>Pertanyaan: ${text}\nJawaban:`;
+      
     try {
       setIsLoading(true);
       setError(null);
@@ -35,7 +41,9 @@ export const useChat = () => {
       addMessage(text, 'user');
       
       const response = await chatService.sendMessage(prompt);
-      const botMessage = response.response || 'Maaf, saya tidak dapat memproses permintaan Anda saat ini.';
+      const botMessage = capitalizeSentences(response || 'Maaf, saya tidak dapat memproses permintaan Anda saat ini.').trim();
+
+      
       
       addMessage(botMessage, 'bot');
       return botMessage;

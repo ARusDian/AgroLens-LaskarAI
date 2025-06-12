@@ -18,7 +18,7 @@ export async function POST(request: Request) {
     const form = new FormData();
     form.append('file', file);
 
-    const response = await fetch('http://localhost:8000/predict-image', {
+    const response = await fetch('http://172.28.42.56:8000/predict-image', {
       method: 'POST',
       body: form,
     });
