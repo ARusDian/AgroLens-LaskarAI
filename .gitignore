@@ -11,3 +11,6 @@ __pycache__/
 NLP/models/external/finetuned-agrolens
 NLP/models/external/indogpt-chatbot-finetuned
 NLP/models/external/indogpt-chatbot
+*.safetensors
+*.pth
+*.bin
