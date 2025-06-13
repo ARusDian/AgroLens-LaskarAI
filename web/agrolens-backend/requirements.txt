@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pillow
+numpy
+tensorflow
+transformers
+torch
+python-multipart
+tf-keras
+diskcache
