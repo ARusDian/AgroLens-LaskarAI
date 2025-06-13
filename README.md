@@ -9,24 +9,28 @@
 * 📷 **Klasifikasi Gambar**: Model pembelajaran mesin untuk mendeteksi berbagai penyakit tanaman dari citra daun.
 * 🤖 **Chatbot NLP**: Menjawab pertanyaan seputar penyakit tanaman padi menggunakan Bahasa Indonesia.
 * 🖥️ **Antarmuka Web**: Sistem frontend dan backend yang memungkinkan interaksi pengguna dan layanan API.
+* 🧠 **Model NLP**: Tersedia di Hugging Face untuk inferensi publik.
 
 ---
 
 ## 🌐 Akses Langsung
 
-Kamu bisa mencoba aplikasi ini secara langsung melalui link berikut:
+Kamu bisa mencoba aplikasi ini secara langsung melalui:
 
-🔗 **[AgroLens Web (Live Demo)](https://agro-lens-web.vercel.app/)**
+* 🔗 **Frontend Web (Live)**: [agro-lens-web.vercel.app](https://agro-lens-web.vercel.app/)
+* 🔗 **Model Chatbot di Hugging Face**: [AgroLens-Chatbot – Hugging Face](https://huggingface.co/ARusDian/AgroLens-Chatbot)
+
+> ✨ **Catatan**: Backend aplikasi juga berjalan di **Hugging Face Spaces**, sehingga dapat melakukan inferensi chatbot secara langsung dari antarmuka web maupun endpoint.
 
 ---
 
 ## 📦 Kebutuhan Sistem
 
-* **Python**: Versi 3.10 atau lebih baru
+* **Python**: Versi 3.12 atau lebih baru
 * **Jupyter Notebook**
 * **Library Python**:
 
-  * `TensorFlow`, `PyTorch`, `scikit-learn`, `pandas`, `numpy`, `openpyxl`, `ipywidgets`, `fast-api`, dll.
+  * `TensorFlow`, `PyTorch`, `scikit-learn`, `pandas`, `numpy`, `openpyxl`, `ipywidgets`, `faiss`, dll.
 * **Node.js**: Untuk menjalankan antarmuka frontend
 
 ---
@@ -53,6 +57,8 @@ source venv/bin/activate  # atau venv\Scripts\activate di Windows
 cd web/agrolens-backend
 python main.py
 ```
+
+> **Alternatif**: Backend juga tersedia di Hugging Face Spaces, jadi tidak wajib dijalankan secara lokal jika hanya ingin menguji inferensi.
 
 ### 4. Jalankan Frontend
 
@@ -91,3 +97,4 @@ npm run dev
 ## 📚 Lisensi
 
 Proyek ini dikembangkan untuk tujuan edukatif dan solusi praktis di bidang pertanian. Silakan gunakan, modifikasi, dan kontribusi sesuai kebutuhan Anda. Untuk informasi lebih lanjut, lihat file LICENSE.
+
