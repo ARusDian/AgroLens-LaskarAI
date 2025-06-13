@@ -1,49 +1,86 @@
-# AgroLens-LaskarAI
+# 🌾 AgroLens-LaskarAI
 
-AgroLens-LaskarAI is a multi-modal AI project for agricultural analysis, featuring image classification and natural language processing (NLP) models. It includes tools for plant disease detection from images and a chatbot for answering agricultural questions in Bahasa Indonesia.
+**AgroLens-LaskarAI** adalah proyek AI multimodal untuk analisis pertanian, menggabungkan model klasifikasi citra dan pemrosesan bahasa alami (NLP). Proyek ini dirancang untuk mendeteksi penyakit tanaman melalui gambar dan menjawab pertanyaan pertanian dalam Bahasa Indonesia melalui chatbot.
 
-## Features
+---
 
-- **Image Classification**: A machine learning models for detecting multiple plant diseases from images.
-- **NLP Chatbot**:  Using natural language processing for Q&A about the disease.
-- **Web Interface**: Frontend and backend for user interaction and API serving.
+## 🚀 Fitur Utama
 
-## Requirements
+* 📷 **Klasifikasi Gambar**: Model pembelajaran mesin untuk mendeteksi berbagai penyakit tanaman dari citra daun.
+* 🤖 **Chatbot NLP**: Menjawab pertanyaan seputar penyakit tanaman padi menggunakan Bahasa Indonesia.
+* 🖥️ **Antarmuka Web**: Sistem frontend dan backend yang memungkinkan interaksi pengguna dan layanan API.
 
-- Python 3.12+
-- Jupyter Notebook
-- TensorFlow, PyTorch, scikit-learn, pandas, numpy, openpyxl, ipywidgets, FAISS, etc.
-- Node.js (for frontend)
+---
 
-## How to Start
+## 📦 Kebutuhan Sistem
 
-1. **Clone the repository**
-   ```sh
-   git clone https://github.com/ARusDian/AgroLens-LaskarAI.git
-   cd AgroLens-LaskarAI
-   ```
+* **Python**: Versi 3.12 atau lebih baru
+* **Jupyter Notebook**
+* **Library Python**:
 
-2. **Set up Python environment**
-    ```python -m venv venv
-    source venv/bin/activate
-    ```
+  * `TensorFlow`, `PyTorch`, `scikit-learn`, `pandas`, `numpy`, `openpyxl`, `ipywidgets`, `faiss`, dll.
+* **Node.js**: Untuk menjalankan antarmuka frontend
 
-3. **Start the backend**
-    ```
-    cd web/agrolens-backend
-    python main.py
-    ```
+---
 
-4. **Start the frontend**    
-    ```
-    cd web/agrolens-frontend
-    npm install
-    npm run dev
-    ```
+## ⚙️ Cara Menjalankan Proyek
 
- ## Overview
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/ARusDian/AgroLens-LaskarAI.git
+cd AgroLens-LaskarAI
+```
+
+### 2. Siapkan Environment Python
+
+```bash
+python -m venv venv
+source venv/bin/activate  # atau venv\Scripts\activate di Windows
+```
+
+### 3. Jalankan Backend
+
+```bash
+cd web/agrolens-backend
+python main.py
+```
+
+### 4. Jalankan Frontend
+
+```bash
+cd ../agrolens-frontend
+npm install
+npm run dev
+```
+
+---
+
+## 🖼️ Tampilan Aplikasi
+
+### Halaman Depan
+
 ![Landing Page](src/landing_page.png)
+
+### Halaman Diagnosa
+
 ![Diagnose Page](src/diagnosa_page.png)
+
+### Hasil Klasifikasi Gambar
+
 ![Result Image Classification](src/result_image_classfication.png)
+
+### Prompt Chatbot
+
 ![Chatbot Prompt](src/chatbot_prompt.png)
+
+### Hasil Chatbot
+
 ![Chatbot Result](src/chatbot_result.png)
+
+---
+
+## 📚 Lisensi
+
+Proyek ini dikembangkan untuk tujuan edukatif dan solusi praktis di bidang pertanian. Silakan gunakan, modifikasi, dan kontribusi sesuai kebutuhan Anda. Untuk informasi lebih lanjut, lihat file LICENSE.
+
