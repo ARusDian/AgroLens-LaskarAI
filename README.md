@@ -1,7 +1,3 @@
-Berikut adalah versi yang telah diperbaiki dan diperindah dari `README.md` untuk **AgroLens-LaskarAI**. Fokusnya adalah menjaga struktur yang rapi, konsisten, dan profesional sambil mempertahankan nuansa proyek AI pertanian yang informatif.
-
----
-
 # 🌾 AgroLens-LaskarAI
 
 **AgroLens-LaskarAI** adalah proyek AI multimodal untuk analisis pertanian, yang menggabungkan model **klasifikasi citra** dan **pemrosesan bahasa alami (NLP)**. Tujuannya adalah membantu deteksi penyakit tanaman dari gambar daun serta memberikan penjelasan dan solusi secara interaktif dalam Bahasa Indonesia melalui chatbot.
