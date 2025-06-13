@@ -1,3 +1,4 @@
+// components/Header.tsx
 "use client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -5,22 +6,14 @@ import Image from "next/image";
 
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
-    const [mounted, setMounted] = useState(false); // untuk hindari mismatch
 
     useEffect(() => {
-        setMounted(true); // tandai bahwa komponen sudah di-mount client-side
-
         const handleScroll = () => {
             setScrolled(window.scrollY > 100);
         };
-
-        handleScroll(); // jalankan sekali saat mount
         window.addEventListener("scroll", handleScroll);
-
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
-
-    if (!mounted) return null; // hindari rendering server-side awal
 
     return (
         <header
@@ -42,7 +35,6 @@ export default function Header() {
                     />
                     <span className="tracking-tight">AgroLens</span>
                 </div>
-
                 <div className="hidden md:flex space-x-8">
                     {["problem", "solution", "details", "timeline", "future"].map((id) => (
                         <Link
@@ -56,6 +48,6 @@ export default function Header() {
                     ))}
                 </div>
             </nav>
-        </header>
+        </header >
     );
 }
