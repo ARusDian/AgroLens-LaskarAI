@@ -22,7 +22,7 @@ Kamu bisa mencoba aplikasi ini secara langsung melalui link berikut:
 
 ## 📦 Kebutuhan Sistem
 
-* **Python**: Versi 3.12 atau lebih baru
+* **Python**: Versi 3.10 atau lebih baru
 * **Jupyter Notebook**
 * **Library Python**:
 
