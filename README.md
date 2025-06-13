@@ -78,7 +78,6 @@ numpy
 opencv-python
 scikit-image
 Pillow
-faiss-cpu
 fastapi
 uvicorn
 ipywidgets
