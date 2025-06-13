@@ -153,4 +153,4 @@ npm run dev
 ## 📚 Lisensi
 
 Proyek ini dikembangkan untuk tujuan edukatif dan solusi praktis dalam pertanian digital.
-Silakan gunakan, kembangkan, dan kontribusikan sesuai kebutuhan. Informasi lengkap tersedia pada file `LICENSE`.
+Silakan gunakan, kembangkan, dan kontribusikan sesuai kebutuhan.
