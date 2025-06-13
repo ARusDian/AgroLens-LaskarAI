@@ -12,18 +12,26 @@
 
 ---
 
+## 🌐 Akses Langsung
+
+Kamu bisa mencoba aplikasi ini secara langsung melalui link berikut:
+
+🔗 **[AgroLens Web (Live Demo)](https://agro-lens-web.vercel.app/)**
+
+---
+
 ## 📦 Kebutuhan Sistem
 
 * **Python**: Versi 3.12 atau lebih baru
 * **Jupyter Notebook**
 * **Library Python**:
 
-  * `TensorFlow`, `PyTorch`, `scikit-learn`, `pandas`, `numpy`, `openpyxl`, `ipywidgets`, `faiss`, dll.
+  * `TensorFlow`, `PyTorch`, `scikit-learn`, `pandas`, `numpy`, `openpyxl`, `ipywidgets`, `fast-api`, dll.
 * **Node.js**: Untuk menjalankan antarmuka frontend
 
 ---
 
-## ⚙️ Cara Menjalankan Proyek
+## ⚙️ Cara Menjalankan Proyek Secara Lokal
 
 ### 1. Clone Repository
 
@@ -83,4 +91,3 @@ npm run dev
 ## 📚 Lisensi
 
 Proyek ini dikembangkan untuk tujuan edukatif dan solusi praktis di bidang pertanian. Silakan gunakan, modifikasi, dan kontribusi sesuai kebutuhan Anda. Untuk informasi lebih lanjut, lihat file LICENSE.
-
