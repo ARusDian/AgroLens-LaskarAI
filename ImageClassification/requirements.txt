@@ -1,0 +1,33 @@
+# Core Python packages
+numpy
+pandas
+matplotlib
+seaborn
+tqdm
+scikit-learn
+opencv-python
+Pillow
+ipython
+ipywidgets
+
+# Image processing
+scikit-image
+
+# Deep Learning
+tensorflow>=2.11.0
+keras
+
+# Optional: untuk pengolahan file dan path
+pathlib
+
+# Roboflow API
+roboflow
+
+# KaggleHub untuk model (jika digunakan)
+kagglehub
+
+# TensorBoard (untuk visualisasi training)
+tensorboard
+
+# Jupyter support (jika dijalankan di luar Colab)
+notebook

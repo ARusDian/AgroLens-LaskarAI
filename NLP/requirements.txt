@@ -1,0 +1,17 @@
+# 🤗 Hugging Face Transformers dan Datasets
+transformers
+datasets
+
+# Tokenizer kustom
+tokenizers
+
+# Training dan evaluasi
+torch          # Transformers memerlukan PyTorch
+tensorflow     # Jika digunakan untuk integrasi atau inferensi tambahan
+
+# FAISS untuk pencarian vektor
+faiss-gpu
+
+# Utility
+numpy
+jsonlines
