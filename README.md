@@ -1,44 +1,48 @@
 # 🌾 AgroLens-LaskarAI
 
-**AgroLens-LaskarAI** is a **multimodal AI project for agricultural analysis**, combining **image classification** and **natural language processing (NLP)**. Its goal is to detect rice plant diseases from leaf images and provide interactive explanations and treatment solutions in **Indonesian** through an AI-powered chatbot.
+### *AI for Smarter Farming — Empowering Indonesia’s Agriculture with Intelligent Insight*
+
+**AgroLens-LaskarAI** is an **AI-driven agricultural intelligence platform**, integrating **image classification** and a **fine-tuned Large Language Model (LLM)** derived from **IndoGPT**.
+The system diagnoses rice leaf diseases from images and delivers **context-aware, Indonesian-language explanations and treatments**, bridging data science and local farming wisdom.
 
 ---
 
 ## 🚀 Key Features
 
-* 📷 **Image Classification**
-  Automatically detects various rice leaf diseases using a deep learning model.
+* 📷 **Intelligent Disease Detection**
+  Deep learning–based image classification that accurately identifies multiple rice leaf diseases from visual inputs.
 
-* 🤖 **NLP Chatbot**
-  Answers questions about symptoms, causes, and treatments of rice diseases in Indonesian.
+* 🧠 **Fine-tuned IndoGPT LLM Chatbot**
+  A specialized agricultural assistant fluent in **Bahasa Indonesia**, capable of explaining symptoms, causes, and treatments.
+  *(Not multimodal — optimized purely for conversational agricultural reasoning.)*
 
-* 🖥️ **Interactive Web Interface**
-  Includes both frontend and backend connected via API for diagnosis and agricultural consultation.
+* 🖥️ **Interactive Web Platform**
+  Full-stack web system enabling farmers, students, and researchers to upload leaf images, receive instant analysis, and interact with the AI for agricultural advice.
 
-* 🧠 **Open NLP Model**
-  The chatbot model is available on Hugging Face for public use and further development.
+* 🔓 **Open and Extensible AI Model**
+  The fine-tuned **IndoGPT model** is publicly available on Hugging Face, enabling customization for research and regional language adaptation.
 
 ---
 
 ## 🌐 Live Access
 
-You can try the live version of the application and model here:
+Experience AgroLens in action:
 
-* 🔗 **Frontend Web**: [agro-lens-web.vercel.app](https://agro-lens-web.vercel.app/)
-* 🔗 **NLP Model on Hugging Face**: [AgroLens-Chatbot @ Hugging Face](https://huggingface.co/ARusDian/AgroLens-Chatbot)
+* 🔗 **Frontend Web App**: [agro-lens-web.vercel.app](https://agro-lens-web.vercel.app/)
+* 🔗 **LLM Model on Hugging Face**: [AgroLens-Chatbot @ Hugging Face](https://huggingface.co/ARusDian/AgroLens-Chatbot)
 
-> 💡 **Note**: The backend is also hosted on **Hugging Face Spaces**, allowing you to use the chatbot inference directly from the web without local setup.
+> 💡 **Note:** The backend is hosted on **Hugging Face Spaces**, allowing direct chatbot inference online without any local setup.
 
 ---
 
 ## 🛠️ Tech Stack
 
-### 🔍 Machine Learning & NLP
+### 🔍 Machine Learning & LLMs
 
 * `TensorFlow`, `Keras`, `PyTorch`
 * `Transformers`, `datasets`, `tokenizers` (Hugging Face)
 * `scikit-learn`, `opencv-python`, `scikit-image`, `Pillow`
-* `faiss-gpu` for vector search
+* `faiss-gpu` — for vector search and knowledge retrieval
 
 ### 🌐 Backend
 
@@ -52,17 +56,17 @@ You can try the live version of the application and model here:
 
 ### ☁️ Deployment
 
-* **Frontend**: [Vercel](https://vercel.com)
-* **Backend/NLP Model**: [Hugging Face Spaces](https://huggingface.co/spaces)
-* **Source Code Repository**: [GitHub](https://github.com/ARusDian/AgroLens-LaskarAI)
+* **Frontend** — [Vercel](https://vercel.com)
+* **Backend / LLM Model** — [Hugging Face Spaces](https://huggingface.co/spaces)
+* **Source Code** — [GitHub Repository](https://github.com/ARusDian/AgroLens-LaskarAI)
 
 ---
 
 ## 📦 System Requirements
 
-* **Python**: Version 3.10 or newer
-* **Node.js**: Required for frontend
-* **Jupyter Notebook**: For ML experimentation
+* **Python** ≥ 3.10
+* **Node.js** for frontend build
+* **Jupyter Notebook** for model experimentation
 
 ### Main Python Libraries
 
@@ -109,7 +113,7 @@ cd web/agrolens-backend
 python main.py
 ```
 
-> 🧪 The backend is also available on Hugging Face Spaces if you just want to test the chatbot without installing it locally.
+> 🧪 Alternatively, access the hosted backend directly on Hugging Face Spaces.
 
 ### 4. Run the Frontend
 
@@ -135,17 +139,16 @@ npm run dev
 
 ![Result Image Classification](assets/result_image_classfication.png)
 
-### Chatbot Prompt
+### Chatbot Interaction
 
 ![Chatbot Prompt](assets/chatbot_prompt.png)
-
-### Chatbot Response
-
-![Chatbot Result](assets/chatbot_result.png)
+![Chatbot Response](assets/chatbot_result.png)
 
 ---
 
 ## 📚 License
 
-This project is developed for educational purposes and as a practical solution for digital agriculture.
-Feel free to use, modify, and contribute to it as needed.
+This project was built as part of **Laskar AI Indonesia** initiative to advance **digital agriculture** through open AI systems.
+You are free to use, adapt, and extend it — for learning, research, or real-world implementation.
+
+> 🌱 *From data to dialogue, AgroLens is where machine learning meets the heart of the field.*
