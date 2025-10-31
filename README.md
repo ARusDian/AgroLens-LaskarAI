@@ -1,33 +1,33 @@
 # 🌾 AgroLens-LaskarAI
 
-**AgroLens-LaskarAI** adalah proyek AI multimodal untuk analisis pertanian, yang menggabungkan model **klasifikasi citra** dan **pemrosesan bahasa alami (NLP)**. Tujuannya adalah membantu deteksi penyakit tanaman dari gambar daun serta memberikan penjelasan dan solusi secara interaktif dalam Bahasa Indonesia melalui chatbot.
+**AgroLens-LaskarAI** is a **multimodal AI project for agricultural analysis**, combining **image classification** and **natural language processing (NLP)**. Its goal is to detect rice plant diseases from leaf images and provide interactive explanations and treatment solutions in **Indonesian** through an AI-powered chatbot.
 
 ---
 
-## 🚀 Fitur Utama
+## 🚀 Key Features
 
-* 📷 **Klasifikasi Gambar**
-  Mendeteksi berbagai penyakit daun tanaman padi secara otomatis dari citra menggunakan model deep learning.
+* 📷 **Image Classification**
+  Automatically detects various rice leaf diseases using a deep learning model.
 
-* 🤖 **Chatbot NLP**
-  Menjawab pertanyaan tentang gejala, penyebab, dan penanganan penyakit padi dalam Bahasa Indonesia.
+* 🤖 **NLP Chatbot**
+  Answers questions about symptoms, causes, and treatments of rice diseases in Indonesian.
 
-* 🖥️ **Antarmuka Web Interaktif**
-  Tersedia frontend dan backend yang terhubung ke API untuk diagnosis dan konsultasi pertanian.
+* 🖥️ **Interactive Web Interface**
+  Includes both frontend and backend connected via API for diagnosis and agricultural consultation.
 
-* 🧠 **Model NLP Terbuka**
-  Model chatbot tersedia di Hugging Face untuk penggunaan publik dan pengembangan lanjutan.
+* 🧠 **Open NLP Model**
+  The chatbot model is available on Hugging Face for public use and further development.
 
 ---
 
-## 🌐 Akses Langsung
+## 🌐 Live Access
 
-Kamu bisa mencoba versi live aplikasi dan model melalui tautan berikut:
+You can try the live version of the application and model here:
 
 * 🔗 **Frontend Web**: [agro-lens-web.vercel.app](https://agro-lens-web.vercel.app/)
-* 🔗 **Model NLP di Hugging Face**: [AgroLens-Chatbot @ Hugging Face](https://huggingface.co/ARusDian/AgroLens-Chatbot)
+* 🔗 **NLP Model on Hugging Face**: [AgroLens-Chatbot @ Hugging Face](https://huggingface.co/ARusDian/AgroLens-Chatbot)
 
-> 💡 **Catatan**: Backend juga berjalan di **Hugging Face Spaces**, sehingga kamu bisa langsung menggunakan inferensi chatbot dari web tanpa setup lokal.
+> 💡 **Note**: The backend is also hosted on **Hugging Face Spaces**, allowing you to use the chatbot inference directly from the web without local setup.
 
 ---
 
@@ -38,7 +38,7 @@ Kamu bisa mencoba versi live aplikasi dan model melalui tautan berikut:
 * `TensorFlow`, `Keras`, `PyTorch`
 * `Transformers`, `datasets`, `tokenizers` (Hugging Face)
 * `scikit-learn`, `opencv-python`, `scikit-image`, `Pillow`
-* `faiss-gpu` untuk pencarian vektor
+* `faiss-gpu` for vector search
 
 ### 🌐 Backend
 
@@ -54,17 +54,17 @@ Kamu bisa mencoba versi live aplikasi dan model melalui tautan berikut:
 
 * **Frontend**: [Vercel](https://vercel.com)
 * **Backend/NLP Model**: [Hugging Face Spaces](https://huggingface.co/spaces)
-* **Repo Code**: [GitHub](https://github.com/ARusDian/AgroLens-LaskarAI)
+* **Source Code Repository**: [GitHub](https://github.com/ARusDian/AgroLens-LaskarAI)
 
 ---
 
-## 📦 Kebutuhan Sistem
+## 📦 System Requirements
 
-* **Python**: Versi 3.10 atau lebih baru
-* **Node.js**: Untuk frontend
-* **Jupyter Notebook**: Untuk eksperimen ML
+* **Python**: Version 3.10 or newer
+* **Node.js**: Required for frontend
+* **Jupyter Notebook**: For ML experimentation
 
-### Library Python (utama)
+### Main Python Libraries
 
 ```txt
 tensorflow
@@ -86,32 +86,32 @@ openpyxl
 
 ---
 
-## ⚙️ Cara Menjalankan Proyek Secara Lokal
+## ⚙️ Running the Project Locally
 
-### 1. Clone Repository
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/ARusDian/AgroLens-LaskarAI.git
 cd AgroLens-LaskarAI
 ```
 
-### 2. Siapkan Environment Python
+### 2. Set Up Python Environment
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # atau venv\Scripts\activate di Windows
+source venv/bin/activate  # or venv\Scripts\activate on Windows
 ```
 
-### 3. Jalankan Backend
+### 3. Run the Backend
 
 ```bash
 cd web/agrolens-backend
 python main.py
 ```
 
-> 🧪 Backend juga tersedia di Hugging Face Spaces jika kamu hanya ingin menguji chatbot tanpa install lokal.
+> 🧪 The backend is also available on Hugging Face Spaces if you just want to test the chatbot without installing it locally.
 
-### 4. Jalankan Frontend
+### 4. Run the Frontend
 
 ```bash
 cd ../agrolens-frontend
@@ -121,31 +121,31 @@ npm run dev
 
 ---
 
-## 🖼️ Tampilan Aplikasi
+## 🖼️ Application Preview
 
-### Halaman Depan
+### Landing Page
 
 ![Landing Page](assets/landing_page.png)
 
-### Halaman Diagnosa
+### Diagnosis Page
 
-![Diagnose Page](assets/diagnosa_page.png)
+![Diagnosis Page](assets/diagnosa_page.png)
 
-### Hasil Klasifikasi Gambar
+### Image Classification Result
 
 ![Result Image Classification](assets/result_image_classfication.png)
 
-### Prompt Chatbot
+### Chatbot Prompt
 
 ![Chatbot Prompt](assets/chatbot_prompt.png)
 
-### Hasil Chatbot
+### Chatbot Response
 
 ![Chatbot Result](assets/chatbot_result.png)
 
 ---
 
-## 📚 Lisensi
+## 📚 License
 
-Proyek ini dikembangkan untuk tujuan edukatif dan solusi praktis dalam pertanian digital.
-Silakan gunakan, kembangkan, dan kontribusikan sesuai kebutuhan.
+This project is developed for educational purposes and as a practical solution for digital agriculture.
+Feel free to use, modify, and contribute to it as needed.
